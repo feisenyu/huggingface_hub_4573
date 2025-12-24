@@ -21,7 +21,7 @@ Das Implementieren eines Webhook-Endpunkts ist so einfach wie das Dekorieren ein
 
 ```python
 # app.py
-from huggingface_hub import webhook_endpoint, WebhookPayload
+from huggingface_hub_4573 import webhook_endpoint, WebhookPayload
 
 @webhook_endpoint
 async def trigger_training(payload: WebhookPayload) -> None:
@@ -87,7 +87,7 @@ Sie können mehrere Endpunkte auf demselben Server registrieren. Beispielsweise 
 
 ```python
 # app.py
-from huggingface_hub import webhook_endpoint, WebhookPayload
+from huggingface_hub_4573 import webhook_endpoint, WebhookPayload
 
 @webhook_endpoint
 async def trigger_training(payload: WebhookPayload) -> None:
@@ -120,7 +120,7 @@ Hier ist ein vollständiges Beispiel:
 ```python
 import gradio as gr
 from fastapi import Request
-from huggingface_hub import WebhooksServer, WebhookPayload
+from huggingface_hub_4573 import WebhooksServer, WebhookPayload
 
 # 1. Benutzerdefinierte UI definieren
 with gr.Blocks() as ui:

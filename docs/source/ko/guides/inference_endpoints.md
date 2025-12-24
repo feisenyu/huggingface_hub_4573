@@ -10,7 +10,7 @@
 첫 번째 단계는 [`create_inference_endpoint`]를 사용하여 추론 엔드포인트를 생성하는 것입니다:
 
 ```py
->>> from huggingface_hub import create_inference_endpoint
+>>> from huggingface_hub_4573 import create_inference_endpoint
 
 >>> endpoint = create_inference_endpoint(
 ...     "my-endpoint-name",
@@ -47,7 +47,7 @@ InferenceEndpoint(name='my-endpoint-name', namespace='Wauplin', repository='gpt2
 
 ```python
 # TGI에서 Zephyr-7b-beta를 실행하는 추론 엔드포인트 시작하기
->>> from huggingface_hub import create_inference_endpoint
+>>> from huggingface_hub_4573 import create_inference_endpoint
 >>> endpoint = create_inference_endpoint(
 ...     "aws-zephyr-7b-beta-0486",
 ...     repository="HuggingFaceH4/zephyr-7b-beta",
@@ -79,7 +79,7 @@ InferenceEndpoint(name='my-endpoint-name', namespace='Wauplin', repository='gpt2
 경우에 따라 이전에 생성한 추론 엔드포인트를 관리해야 할 수 있습니다. 이름을 알고 있는 경우 [`get_inference_endpoint`]를 사용하여 [`InferenceEndpoint`] 개체를 가져올 수 있습니다. 또는 [`list_inference_endpoints`]를 사용하여 모든 추론 엔드포인트 리스트를 검색할 수 있습니다. 두 메소드 모두 선택적 `namespace` 매개변수를 허용합니다. 속해 있는 조직의 `namespace`를 설정할 수 있습니다. 그렇지 않으면 기본적으로 사용자 이름이 사용됩니다.
 
 ```py
->>> from huggingface_hub import get_inference_endpoint, list_inference_endpoints
+>>> from huggingface_hub_4573 import get_inference_endpoint, list_inference_endpoints
 
 # 엔드포인트 개체 가져오기
 >>> get_inference_endpoint("my-endpoint-name")
@@ -213,7 +213,7 @@ InferenceEndpoint(name='my-endpoint-name', namespace='Wauplin', repository='gpt2
 
 ```py
 >>> import asyncio
->>> from huggingface_hub import create_inference_endpoint
+>>> from huggingface_hub_4573 import create_inference_endpoint
 
 # 엔드포인트 시작 + 초기화될 때까지 대기
 >>> endpoint = create_inference_endpoint(name="batch-endpoint",...).wait()
@@ -234,7 +234,7 @@ InferenceEndpoint(name='my-endpoint-name', namespace='Wauplin', repository='gpt2
 
 ```py
 >>> import asyncio
->>> from huggingface_hub import get_inference_endpoint
+>>> from huggingface_hub_4573 import get_inference_endpoint
 
 # 엔드포인트 가져오기 + 초기화될 때까지 대기
 >>> endpoint = get_inference_endpoint("batch-endpoint").resume().wait()

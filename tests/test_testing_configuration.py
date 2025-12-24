@@ -1,4 +1,4 @@
-from huggingface_hub import get_token
+from huggingface_hub_4573 import get_token
 
 
 def test_no_token_in_staging_environment():

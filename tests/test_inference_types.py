@@ -5,8 +5,8 @@ from typing import List, Optional, Union, get_args, get_origin
 import pytest
 
 import huggingface_hub.inference._generated.types as types
-from huggingface_hub.inference._generated.types import AutomaticSpeechRecognitionParameters
-from huggingface_hub.inference._generated.types.base import BaseInferenceType, dataclass_with_extra
+from huggingface_hub_4573.inference._generated.types import AutomaticSpeechRecognitionParameters
+from huggingface_hub_4573.inference._generated.types.base import BaseInferenceType, dataclass_with_extra
 
 
 @dataclass_with_extra

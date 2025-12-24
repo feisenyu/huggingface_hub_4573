@@ -2,7 +2,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import Mock, patch
 
-from huggingface_hub.utils import (
+from huggingface_hub_4573.utils import (
     HFValidationError,
     validate_hf_hub_args,
     validate_repo_id,

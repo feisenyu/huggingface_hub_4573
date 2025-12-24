@@ -7,8 +7,8 @@ from unittest.mock import Mock
 import pytest
 from pytest_mock import MockerFixture
 
-from huggingface_hub import constants
-from huggingface_hub.serialization import (
+from huggingface_hub_4573 import constants
+from huggingface_hub_4573.serialization import (
     get_torch_storage_size,
     load_state_dict_from_file,
     load_torch_model,
@@ -17,8 +17,8 @@ from huggingface_hub.serialization import (
     split_state_dict_into_shards_factory,
     split_torch_state_dict_into_shards,
 )
-from huggingface_hub.serialization._base import parse_size_to_int
-from huggingface_hub.serialization._torch import _load_sharded_checkpoint
+from huggingface_hub_4573.serialization._base import parse_size_to_int
+from huggingface_hub_4573.serialization._torch import _load_sharded_checkpoint
 
 from .testing_utils import requires
 

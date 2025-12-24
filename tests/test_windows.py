@@ -3,7 +3,7 @@
 import os
 import unittest
 
-from huggingface_hub.file_download import are_symlinks_supported
+from huggingface_hub_4573.file_download import are_symlinks_supported
 
 
 def require_windows(test_case):

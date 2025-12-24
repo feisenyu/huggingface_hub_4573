@@ -18,7 +18,7 @@ Collection은 Hub(모델, 데이터셋, Spaces, 논문)에 있는 관련 항목�
 `"TheBloke/recent-models-64f9a55bb3115b4f513ec026"` Collection을 가져와 봅시다:
 
 ```py
->>> from huggingface_hub import get_collection
+>>> from huggingface_hub_4573 import get_collection
 >>> collection = get_collection("TheBloke/recent-models-64f9a55bb3115b4f513ec026")
 >>> collection
 Collection(
@@ -62,7 +62,7 @@ CollectionItem(
 [`list_collections`]를 사용하여 Collections를 나열할 수도 있습니다. Collections는 몇 가지 매개변수를 사용하여 필터링할 수 있습니다. 사용자 [`teknium`](https://huggingface.co/teknium)의 모든 Collections를 나열해 봅시다.
 
 ```py
->>> from huggingface_hub import list_collections
+>>> from huggingface_hub_4573 import list_collections
 
 >>> collections = list_collections(owner="teknium")
 ```
@@ -105,7 +105,7 @@ Crataco/favorite-7b-models-651944072b4fffcb41f8b568
 이제 [`Collection`]을 가져오는 방법을 알았으니 우리만의 Collection을 만들어봅시다! 제목과 설명을 사용하여 [`create_collection`]을 호출합니다. 조직 페이지에 Collection을 만들려면 Collection 생성 시 `namespace="my-cool-org"`를 전달합니다. 마지막으로 `private=True`를 전달하여 비공개 Collection을 만들 수도 있습니다.
 
 ```py
->>> from huggingface_hub import create_collection
+>>> from huggingface_hub_4573 import create_collection
 
 >>> collection = create_collection(
 ...     title="ICCV 2023",
@@ -135,7 +135,7 @@ Crataco/favorite-7b-models-651944072b4fffcb41f8b568
 item은 [`add_collection_item`]을 사용하여 하나씩 추가해야 합니다. `collection_slug`, `item_id`, `item_type`만 알면 됩니다. 또한 선택적으로 항목에 `note`를 추가할 수도 있습니다(최대 500자).
 
 ```py
->>> from huggingface_hub import create_collection, add_collection_item
+>>> from huggingface_hub_4573 import create_collection, add_collection_item
 
 >>> collection = create_collection(title="OS Week Highlights - Sept 18 - 24", namespace="osanseviero")
 >>> collection.slug
@@ -159,7 +159,7 @@ Collection에 item이 이미 존재하는 경우(동일한 `item_id`/`item_type`
 [`update_collection_item`]을 사용하여 기존 item을 수정하여 메모를 추가하거나 변경할 수 있습니다. 위의 예시를 다시 사용해 봅시다:
 
 ```py
->>> from huggingface_hub import get_collection, update_collection_item
+>>> from huggingface_hub_4573 import get_collection, update_collection_item
 
 # 새로 추가된 item과 함께 Collection 가져오기
 >>> collection_slug = "osanseviero/os-week-highlights-sept-18-24-650bfed7f795a59f491afb80"
@@ -180,7 +180,7 @@ Collection의 item은 순서가 있습니다. 이 순서는 각 item의 `positio
 위의 예시를 다시 사용해 봅시다:
 
 ```py
->>> from huggingface_hub import get_collection, update_collection_item
+>>> from huggingface_hub_4573 import get_collection, update_collection_item
 
 # Collection 가져오기
 >>> collection_slug = "osanseviero/os-week-highlights-sept-18-24-650bfed7f795a59f491afb80"
@@ -199,7 +199,7 @@ Collection의 item은 순서가 있습니다. 이 순서는 각 item의 `positio
 마지막으로 [`delete_collection_item`]을 사용하여 item을 제거할 수도 있습니다.
 
 ```py
->>> from huggingface_hub import get_collection, update_collection_item
+>>> from huggingface_hub_4573 import get_collection, update_collection_item
 
 # Collection 가져오기
 >>> collection_slug = "osanseviero/os-week-highlights-sept-18-24-650bfed7f795a59f491afb80"
@@ -217,6 +217,6 @@ Collection의 item은 순서가 있습니다. 이 순서는 각 item의 `positio
 > 이 작업은 되돌릴 수 없습니다. 삭제된 Collection은 복구할 수 없습니다.
 
 ```py
->>> from huggingface_hub import delete_collection
+>>> from huggingface_hub_4573 import delete_collection
 >>> collection = delete_collection("username/useless-collection-64f9a55bb3115b4f513ec026", missing_ok=True)
 ```

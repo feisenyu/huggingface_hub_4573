@@ -31,15 +31,15 @@ from urllib.parse import urlparse
 
 import pytest
 
-from huggingface_hub import HfApi, SpaceHardware, SpaceStage, SpaceStorage, constants
-from huggingface_hub._commit_api import (
+from huggingface_hub_4573 import HfApi, SpaceHardware, SpaceStage, SpaceStorage, constants
+from huggingface_hub_4573._commit_api import (
     CommitOperationAdd,
     CommitOperationCopy,
     CommitOperationDelete,
     _fetch_upload_modes,
 )
-from huggingface_hub.community import DiscussionComment, DiscussionWithDetails
-from huggingface_hub.errors import (
+from huggingface_hub_4573.community import DiscussionComment, DiscussionWithDetails
+from huggingface_hub_4573.errors import (
     BadRequestError,
     EntryNotFoundError,
     GatedRepoError,
@@ -47,8 +47,8 @@ from huggingface_hub.errors import (
     RepositoryNotFoundError,
     RevisionNotFoundError,
 )
-from huggingface_hub.file_download import hf_hub_download
-from huggingface_hub.hf_api import (
+from huggingface_hub_4573.file_download import hf_hub_download
+from huggingface_hub_4573.hf_api import (
     AccessRequest,
     Collection,
     CommitInfo,
@@ -68,8 +68,8 @@ from huggingface_hub.hf_api import (
     WebhookWatchedItem,
     repo_type_and_id_from_hf_id,
 )
-from huggingface_hub.repocard_data import DatasetCardData, ModelCardData
-from huggingface_hub.utils import (
+from huggingface_hub_4573.repocard_data import DatasetCardData, ModelCardData
+from huggingface_hub_4573.utils import (
     NotASafetensorsRepoError,
     SafetensorsFileMetadata,
     SafetensorsParsingError,
@@ -80,7 +80,7 @@ from huggingface_hub.utils import (
     hf_raise_for_status,
     logging,
 )
-from huggingface_hub.utils.endpoint_helpers import _is_emission_within_threshold
+from huggingface_hub_4573.utils.endpoint_helpers import _is_emission_within_threshold
 
 from .testing_constants import (
     ENDPOINT_STAGING,

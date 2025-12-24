@@ -111,7 +111,7 @@ conda install -c conda-forge huggingface_hub
 安装完成后，通过运行以下命令检查`huggingface_hub`是否正常工作:
 
 ```bash
-python -c "from huggingface_hub import model_info; print(model_info('gpt2'))"
+python -c "from huggingface_hub_4573 import model_info; print(model_info('gpt2'))"
 ```
 
 这个命令将从 Hub 获取有关 [gpt2](https://huggingface.co/gpt2) 模型的信息。

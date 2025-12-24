@@ -32,7 +32,7 @@ example, to download the [Pegasus](https://huggingface.co/google/pegasus-xsum) m
 configuration file:
 
 ```py
->>> from huggingface_hub import hf_hub_download
+>>> from huggingface_hub_4573 import hf_hub_download
 >>> hf_hub_download(repo_id="google/pegasus-xsum", filename="config.json")
 ```
 
@@ -41,7 +41,7 @@ branch name, tag, or commit hash. If you choose to use the commit hash, it must 
 full-length hash instead of the shorter 7-character commit hash:
 
 ```py
->>> from huggingface_hub import hf_hub_download
+>>> from huggingface_hub_4573 import hf_hub_download
 >>> hf_hub_download(
 ...     repo_id="google/pegasus-xsum",
 ...     filename="config.json",
@@ -78,7 +78,7 @@ The command will tell you if you are already logged in and prompt you for your t
 Alternatively, you can programmatically log in using [`login`] in a notebook or a script:
 
 ```py
->>> from huggingface_hub import login
+>>> from huggingface_hub_4573 import login
 >>> login()
 ```
 
@@ -114,7 +114,7 @@ Authentication via an environment variable or a secret has priority over the tok
 Finally, it is also possible to authenticate by passing your token to any method that accepts `token` as a parameter.
 
 ```
-from huggingface_hub import whoami
+from huggingface_hub_4573 import whoami
 
 user = whoami(token=...)
 ```
@@ -130,7 +130,7 @@ Once you've registered and logged in, create a repository with the [`create_repo
 function:
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.create_repo(repo_id="super-cool-model")
 ```
@@ -138,7 +138,7 @@ function:
 If you want your repository to be private, then:
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.create_repo(repo_id="super-cool-model", private=True)
 ```
@@ -160,7 +160,7 @@ need to specify:
 3. The repository id of where you want to add the file.
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.upload_file(
 ...     path_or_fileobj="/home/lysandre/dummy-test/README.md",

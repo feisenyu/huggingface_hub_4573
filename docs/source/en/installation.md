@@ -135,7 +135,7 @@ Once done, [check installation](#check-installation) is working correctly.
 Once installed, check that `huggingface_hub` works properly by running the following command:
 
 ```bash
-python -c "from huggingface_hub import model_info; print(model_info('gpt2'))"
+python -c "from huggingface_hub_4573 import model_info; print(model_info('gpt2'))"
 ```
 
 This command will fetch information from the Hub about the [gpt2](https://huggingface.co/gpt2) model.

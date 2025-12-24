@@ -5,10 +5,10 @@ from unittest.mock import MagicMock, patch
 import pytest
 from pytest import LogCaptureFixture
 
-from huggingface_hub.hf_api import InferenceProviderMapping
-from huggingface_hub.inference._common import RequestParameters
-from huggingface_hub.inference._providers import PROVIDERS, get_provider_helper
-from huggingface_hub.inference._providers._common import (
+from huggingface_hub_4573.hf_api import InferenceProviderMapping
+from huggingface_hub_4573.inference._common import RequestParameters
+from huggingface_hub_4573.inference._providers import PROVIDERS, get_provider_helper
+from huggingface_hub_4573.inference._providers._common import (
     AutoRouterConversationalTask,
     BaseConversationalTask,
     BaseTextGenerationTask,
@@ -16,10 +16,10 @@ from huggingface_hub.inference._providers._common import (
     filter_none,
     recursive_merge,
 )
-from huggingface_hub.inference._providers.black_forest_labs import BlackForestLabsTextToImageTask
-from huggingface_hub.inference._providers.clarifai import ClarifaiConversationalTask
-from huggingface_hub.inference._providers.cohere import CohereConversationalTask
-from huggingface_hub.inference._providers.fal_ai import (
+from huggingface_hub_4573.inference._providers.black_forest_labs import BlackForestLabsTextToImageTask
+from huggingface_hub_4573.inference._providers.clarifai import ClarifaiConversationalTask
+from huggingface_hub_4573.inference._providers.cohere import CohereConversationalTask
+from huggingface_hub_4573.inference._providers.fal_ai import (
     _POLLING_INTERVAL,
     FalAIAutomaticSpeechRecognitionTask,
     FalAIImageSegmentationTask,
@@ -29,41 +29,41 @@ from huggingface_hub.inference._providers.fal_ai import (
     FalAITextToSpeechTask,
     FalAITextToVideoTask,
 )
-from huggingface_hub.inference._providers.featherless_ai import (
+from huggingface_hub_4573.inference._providers.featherless_ai import (
     FeatherlessConversationalTask,
     FeatherlessTextGenerationTask,
 )
-from huggingface_hub.inference._providers.fireworks_ai import FireworksAIConversationalTask
-from huggingface_hub.inference._providers.groq import GroqConversationalTask
-from huggingface_hub.inference._providers.hf_inference import (
+from huggingface_hub_4573.inference._providers.fireworks_ai import FireworksAIConversationalTask
+from huggingface_hub_4573.inference._providers.groq import GroqConversationalTask
+from huggingface_hub_4573.inference._providers.hf_inference import (
     HFInferenceBinaryInputTask,
     HFInferenceConversational,
     HFInferenceFeatureExtractionTask,
     HFInferenceTask,
 )
-from huggingface_hub.inference._providers.hyperbolic import HyperbolicTextGenerationTask, HyperbolicTextToImageTask
-from huggingface_hub.inference._providers.nebius import NebiusFeatureExtractionTask, NebiusTextToImageTask
-from huggingface_hub.inference._providers.novita import NovitaConversationalTask, NovitaTextGenerationTask
-from huggingface_hub.inference._providers.nscale import NscaleConversationalTask, NscaleTextToImageTask
-from huggingface_hub.inference._providers.openai import OpenAIConversationalTask
-from huggingface_hub.inference._providers.ovhcloud import OVHcloudConversationalTask
-from huggingface_hub.inference._providers.publicai import PublicAIConversationalTask
-from huggingface_hub.inference._providers.replicate import (
+from huggingface_hub_4573.inference._providers.hyperbolic import HyperbolicTextGenerationTask, HyperbolicTextToImageTask
+from huggingface_hub_4573.inference._providers.nebius import NebiusFeatureExtractionTask, NebiusTextToImageTask
+from huggingface_hub_4573.inference._providers.novita import NovitaConversationalTask, NovitaTextGenerationTask
+from huggingface_hub_4573.inference._providers.nscale import NscaleConversationalTask, NscaleTextToImageTask
+from huggingface_hub_4573.inference._providers.openai import OpenAIConversationalTask
+from huggingface_hub_4573.inference._providers.ovhcloud import OVHcloudConversationalTask
+from huggingface_hub_4573.inference._providers.publicai import PublicAIConversationalTask
+from huggingface_hub_4573.inference._providers.replicate import (
     ReplicateAutomaticSpeechRecognitionTask,
     ReplicateImageToImageTask,
     ReplicateTask,
     ReplicateTextToSpeechTask,
 )
-from huggingface_hub.inference._providers.sambanova import SambanovaConversationalTask, SambanovaFeatureExtractionTask
-from huggingface_hub.inference._providers.scaleway import ScalewayConversationalTask, ScalewayFeatureExtractionTask
-from huggingface_hub.inference._providers.together import TogetherTextToImageTask
-from huggingface_hub.inference._providers.wavespeed import (
+from huggingface_hub_4573.inference._providers.sambanova import SambanovaConversationalTask, SambanovaFeatureExtractionTask
+from huggingface_hub_4573.inference._providers.scaleway import ScalewayConversationalTask, ScalewayFeatureExtractionTask
+from huggingface_hub_4573.inference._providers.together import TogetherTextToImageTask
+from huggingface_hub_4573.inference._providers.wavespeed import (
     WavespeedAIImageToImageTask,
     WavespeedAIImageToVideoTask,
     WavespeedAITextToImageTask,
     WavespeedAITextToVideoTask,
 )
-from huggingface_hub.inference._providers.zai_org import ZaiConversationalTask
+from huggingface_hub_4573.inference._providers.zai_org import ZaiConversationalTask
 
 from .testing_utils import assert_in_logs
 
@@ -1103,7 +1103,7 @@ class TestHFInferenceProvider:
         ],
     )
     def test_check_supported_task_scenarios(self, mocker, pipeline_tag, tags, task, should_raise):
-        from huggingface_hub.inference._providers.hf_inference import _check_supported_task
+        from huggingface_hub_4573.inference._providers.hf_inference import _check_supported_task
 
         mock_model_info = mocker.Mock(pipeline_tag=pipeline_tag, tags=tags)
         mocker.patch("huggingface_hub.hf_api.HfApi.model_info", return_value=mock_model_info)

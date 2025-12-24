@@ -36,7 +36,7 @@ your username namespace) or from organizations in which you have write permissio
 Create an empty repository with [`create_repo`] and give it a name with the `repo_id` parameter. The `repo_id` is your namespace followed by the repository name: `username_or_org/repo_name`.
 
 ```py
->>> from huggingface_hub import create_repo
+>>> from huggingface_hub_4573 import create_repo
 >>> create_repo("lysandre/test-model")
 'https://huggingface.co/lysandre/test-model'
 ```
@@ -52,7 +52,7 @@ Your repo is now available at https://huggingface.co/lysandre/test-model
 By default, [`create_repo`] creates a model repository. But you can use the `repo_type` parameter to specify another repository type. For example, if you want to create a dataset repository:
 
 ```py
->>> from huggingface_hub import create_repo
+>>> from huggingface_hub_4573 import create_repo
 >>> create_repo("lysandre/test-dataset", repo_type="dataset")
 'https://huggingface.co/datasets/lysandre/test-dataset'
 ```
@@ -66,7 +66,7 @@ Or via CLI:
 When you create a repository, you can set your repository visibility with the `private` parameter.
 
 ```py
->>> from huggingface_hub import create_repo
+>>> from huggingface_hub_4573 import create_repo
 >>> create_repo("lysandre/test-private", private=True)
 ```
 
@@ -104,7 +104,7 @@ This is possible for Spaces using the [`duplicate_space`] method. It will duplic
 You will still need to configure your own settings (hardware, sleep-time, storage, variables and secrets). Check out our [Manage your Space](./manage-spaces) guide for more details.
 
 ```py
->>> from huggingface_hub import duplicate_space
+>>> from huggingface_hub_4573 import duplicate_space
 >>> duplicate_space("multimodalart/dreambooth-training", private=False)
 RepoUrl('https://huggingface.co/spaces/nateraw/dreambooth-training',...)
 ```
@@ -128,7 +128,7 @@ More generally, branches and tags are referred as [git references](https://git-s
 You can create new branch and tags using [`create_branch`] and [`create_tag`]:
 
 ```py
->>> from huggingface_hub import create_branch, create_tag
+>>> from huggingface_hub_4573 import create_branch, create_tag
 
 # Create a branch on a Space repo from `main` branch
 >>> create_branch("Matthijs/speecht5-tts-demo", repo_type="space", branch="handle-dog-speaker")
@@ -152,7 +152,7 @@ You can use the [`delete_branch`] and [`delete_tag`] functions in the same way t
 You can also list the existing git refs from a repository using [`list_repo_refs`]:
 
 ```py
->>> from huggingface_hub import list_repo_refs
+>>> from huggingface_hub_4573 import list_repo_refs
 >>> list_repo_refs("bigcode/the-stack", repo_type="dataset")
 GitRefs(
    branches=[
@@ -179,7 +179,7 @@ Some settings are specific to Spaces (hardware, environment variables,...). To c
 A repository can be public or private. A private repository is only visible to you or members of the organization in which the repository is located. Change a repository to private as shown in the following:
 
 ```py
->>> from huggingface_hub import update_repo_settings
+>>> from huggingface_hub_4573 import update_repo_settings
 >>> update_repo_settings(repo_id=repo_id, private=True)
 ```
 
@@ -196,7 +196,7 @@ To give more control over how repos are used, the Hub allows repo authors to ena
 You can set a repo as gated using [`update_repo_settings`]:
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 
 >>> api = HfApi()
 >>> api.update_repo_settings(repo_id=repo_id, gated="auto")  # Set automatic gating for a model
@@ -215,7 +215,7 @@ an organization. When doing so, there are a [few limitations](https://hf.co/docs
 that you should be aware of. For example, you can't transfer your repo to another user.
 
 ```py
->>> from huggingface_hub import move_repo
+>>> from huggingface_hub_4573 import move_repo
 >>> move_repo(from_id="Wauplin/cool-model", to_id="huggingface/cool-model")
 ```
 

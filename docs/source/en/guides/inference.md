@@ -24,7 +24,7 @@ The `huggingface_hub` library provides a unified interface to run inference acro
 Let's get started with a text-to-image task:
 
 ```python
->>> from huggingface_hub import InferenceClient
+>>> from huggingface_hub_4573 import InferenceClient
 
 # Example with an external provider (e.g. replicate)
 >>> replicate_client = InferenceClient(
@@ -45,7 +45,7 @@ In our example, we generated an image from a text prompt. The returned value is 
 Let's now see an example using the [`~InferenceClient.chat_completion`] API. This task uses an LLM to generate a response from a list of messages:
 
 ```python
->>> from huggingface_hub import InferenceClient
+>>> from huggingface_hub_4573 import InferenceClient
 >>> messages = [
     {
         "role": "user",
@@ -91,7 +91,7 @@ In the example above, we used a third-party provider ([Together AI](https://www.
 If you want to use a specific provider, you can specify it when initializing the client. The default value is "auto" which will select the first of the providers available for the model, sorted by the user's order in https://hf.co/settings/inference-providers. Refer to the [Supported providers and tasks](#supported-providers-and-tasks) section for a list of supported providers.
 
 ```python
->>> from huggingface_hub import InferenceClient
+>>> from huggingface_hub_4573 import InferenceClient
 >>> client = InferenceClient(provider="replicate", api_key="my_replicate_api_key")
 ```
 
@@ -100,7 +100,7 @@ If you want to use a specific provider, you can specify it when initializing the
 What if you want to use a specific model? You can specify it either as a parameter or directly at an instance level:
 
 ```python
->>> from huggingface_hub import InferenceClient
+>>> from huggingface_hub_4573 import InferenceClient
 # Initialize client for a specific model
 >>> client = InferenceClient(provider="together", model="meta-llama/Llama-3.1-8B-Instruct")
 >>> client.text_to_image(...)
@@ -125,7 +125,7 @@ any model and expose it as a private API. Once deployed, you'll get a URL that y
 code as before, changing only the `model` parameter:
 
 ```python
->>> from huggingface_hub import InferenceClient
+>>> from huggingface_hub_4573 import InferenceClient
 >>> client = InferenceClient(model="https://uu149rez6gw9ehej.eu-west-1.aws.endpoints.huggingface.cloud/deepfloyd-if")
 # or
 >>> client = InferenceClient()
@@ -139,7 +139,7 @@ Note that you cannot specify both a URL and a provider - they are mutually exclu
 You can use [`InferenceClient`] to run chat completion with local inference servers (llama.cpp, vllm, litellm server, TGI, mlx, etc.) running on your own machine. The API should be OpenAI API-compatible.
 
 ```python
->>> from huggingface_hub import InferenceClient
+>>> from huggingface_hub_4573 import InferenceClient
 >>> client = InferenceClient(model="http://localhost:8080")
 
 >>> response = client.chat.completions.create(
@@ -233,7 +233,7 @@ The `chat_completion` task follows [OpenAI's Python client](https://github.com/o
 
 ```diff
 - from openai import OpenAI
-+ from huggingface_hub import InferenceClient
++ from huggingface_hub_4573 import InferenceClient
 
 - client = OpenAI(
 + client = InferenceClient(
@@ -256,14 +256,14 @@ for chunk in output:
     print(chunk.choices[0].delta.content)
 ```
 
-And that's it! The only required changes are to replace `from openai import OpenAI` by `from huggingface_hub import InferenceClient` and `client = OpenAI(...)` by `client = InferenceClient(...)`. You can choose any LLM model from the Hugging Face Hub by passing its model id as `model` parameter. [Here is a list](https://huggingface.co/models?pipeline_tag=text-generation&other=conversational,text-generation-inference&sort=trending) of supported models. For authentication, you should pass a valid [User Access Token](https://huggingface.co/settings/tokens) as `api_key` or authenticate using `huggingface_hub` (see the [authentication guide](https://huggingface.co/docs/huggingface_hub/quick-start#authentication)).
+And that's it! The only required changes are to replace `from openai import OpenAI` by `from huggingface_hub_4573 import InferenceClient` and `client = OpenAI(...)` by `client = InferenceClient(...)`. You can choose any LLM model from the Hugging Face Hub by passing its model id as `model` parameter. [Here is a list](https://huggingface.co/models?pipeline_tag=text-generation&other=conversational,text-generation-inference&sort=trending) of supported models. For authentication, you should pass a valid [User Access Token](https://huggingface.co/settings/tokens) as `api_key` or authenticate using `huggingface_hub` (see the [authentication guide](https://huggingface.co/docs/huggingface_hub/quick-start#authentication)).
 
 All input parameters and output format are strictly the same. In particular, you can pass `stream=True` to receive tokens as they are generated. You can also use the [`AsyncInferenceClient`] to run inference using `asyncio`:
 
 ```diff
 import asyncio
 - from openai import AsyncOpenAI
-+ from huggingface_hub import AsyncInferenceClient
++ from huggingface_hub_4573 import AsyncInferenceClient
 
 - client = AsyncOpenAI()
 + client = AsyncInferenceClient()
@@ -294,7 +294,7 @@ Function calling allows LLMs to interact with external tools, such as defined fu
 `InferenceClient` implements the same tool calling interface as the OpenAI Chat Completions API. Here is a simple example of tool calling using [Nebius](https://nebius.com/) as the inference provider:
 
 ```python
-from huggingface_hub import InferenceClient
+from huggingface_hub_4573 import InferenceClient
 
 tools = [
         {
@@ -344,7 +344,7 @@ InferenceClient supports JSON mode for syntactically valid JSON responses and St
 We follow the OpenAI API specs for both JSON mode and Structured Outputs. You can enable them via the `response_format` argument. Here is an example of Structured Outputs using [Cerebras](https://www.cerebras.ai/) as the inference provider:
 
 ```python
-from huggingface_hub import InferenceClient
+from huggingface_hub_4573 import InferenceClient
 
 json_schema = {
     "name": "book",
@@ -394,7 +394,7 @@ An async version of the client is also provided, based on `asyncio` and `httpx`.
 ```py
 # Code must be run in an asyncio concurrent context.
 # $ python -m asyncio
->>> from huggingface_hub import AsyncInferenceClient
+>>> from huggingface_hub_4573 import AsyncInferenceClient
 >>> client = AsyncInferenceClient()
 
 >>> image = await client.text_to_image("An astronaut riding a horse on the moon.")
@@ -418,7 +418,7 @@ In the following example, we use [Qwen/Qwen2.5-72B-Instruct](https://huggingface
 ```python
 import os
 
-from huggingface_hub import ChatCompletionInputMessage, ChatCompletionStreamOutput, MCPClient
+from huggingface_hub_4573 import ChatCompletionInputMessage, ChatCompletionStreamOutput, MCPClient
 
 
 async def main():
@@ -479,7 +479,7 @@ In the above section, we saw the main aspects of [`InferenceClient`]. Let's dive
 As an HF user, you get monthly credits to run inference through various providers on the Hub. The amount of credits you get depends on your type of account (Free or PRO or Enterprise Hub). You get charged for every inference request, depending on the provider's pricing table. By default, the requests are billed to your personal account. However, it is possible to set the billing so that requests are charged to an organization you are part of by simply passing `bill_to="<your_org_name>"` to `InferenceClient`. For this to work, your organization must be subscribed to Enterprise Hub. For more details about billing, check out [this guide](https://huggingface.co/docs/api-inference/pricing#features-using-inference-providers).
 
 ```py
->>> from huggingface_hub import InferenceClient
+>>> from huggingface_hub_4573 import InferenceClient
 >>> client = InferenceClient(provider="fal-ai", bill_to="openai")
 >>> image = client.text_to_image(
 ...     "A majestic lion in a fantasy forest",
@@ -496,7 +496,7 @@ Note that it is NOT possible to charge another user or an organization you are n
 Inference calls can take a significant amount of time. By default, [`InferenceClient`] will wait "indefinitely" until the inference complete. If you want more control in your workflow, you can set the `timeout` parameter to a specific value in seconds. If the timeout delay expires, an [`InferenceTimeoutError`] is raised, which you can catch in your code:
 
 ```python
->>> from huggingface_hub import InferenceClient, InferenceTimeoutError
+>>> from huggingface_hub_4573 import InferenceClient, InferenceTimeoutError
 >>> client = InferenceClient(timeout=30)
 >>> try:
 ...     client.text_to_image(...)
@@ -515,7 +515,7 @@ tries to be as permissive as possible and accept different types:
 being sent to the API.
 
 ```py
->>> from huggingface_hub import InferenceClient
+>>> from huggingface_hub_4573 import InferenceClient
 >>> client = InferenceClient()
 >>> client.image_classification("https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Cute_dog.jpg/320px-Cute_dog.jpg")
 [{'score': 0.9779096841812134, 'label': 'Blenheim spaniel'}, ...]

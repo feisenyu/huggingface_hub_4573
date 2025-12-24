@@ -24,14 +24,14 @@ Hub의 리포지토리는 git으로 버전 관리되며, 사용자는 단일 파
 다운로드하려면 리포지토리 ID와 파일명이 필요합니다. 예를 들어, [Pegasus](https://huggingface.co/google/pegasus-xsum) 모델 구성 파일을 다운로드하려면:
 
 ```py
->>> from huggingface_hub import hf_hub_download
+>>> from huggingface_hub_4573 import hf_hub_download
 >>> hf_hub_download(repo_id="google/pegasus-xsum", filename="config.json")
 ```
 
 특정 버전의 파일을 다운로드하려면 `revision` 매개변수를 사용하여 브랜치 이름, 태그 또는 커밋 해시를 지정하세요. 커밋 해시를 사용하기로 선택한 경우, 7자로 된 짧은 커밋 해시 대신 전체 길이의 해시여야 합니다:
 
 ```py
->>> from huggingface_hub import hf_hub_download
+>>> from huggingface_hub_4573 import hf_hub_download
 >>> hf_hub_download(
 ...     repo_id="google/pegasus-xsum",
 ...     filename="config.json",
@@ -57,7 +57,7 @@ hf auth login --token $HUGGINGFACE_TOKEN
 또는 주피터 노트북이나 스크립트에서 [`login`]로 프로그래밍 방식으로 로그인할 수도 있습니다:
 
 ```py
->>> from huggingface_hub import login
+>>> from huggingface_hub_4573 import login
 >>> login()
 ```
 
@@ -74,7 +74,7 @@ hf auth login --token $HUGGINGFACE_TOKEN
 등록 및 로그인이 완료되면 [`create_repo`] 함수를 사용하여 리포지토리를 생성하세요:
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.create_repo(repo_id="super-cool-model")
 ```
@@ -82,7 +82,7 @@ hf auth login --token $HUGGINGFACE_TOKEN
 리포지토리를 비공개로 설정하려면 다음과 같이 하세요:
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.create_repo(repo_id="super-cool-model", private=True)
 ```
@@ -101,7 +101,7 @@ hf auth login --token $HUGGINGFACE_TOKEN
 3. 파일을 추가할 위치의 리포지토리 ID
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.upload_file(
 ...     path_or_fileobj="/home/lysandre/dummy-test/README.md",

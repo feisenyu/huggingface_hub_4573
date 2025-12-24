@@ -14,9 +14,9 @@ from unittest.mock import Mock, patch
 import fsspec
 import pytest
 
-from huggingface_hub import constants, hf_file_system
-from huggingface_hub.errors import RepositoryNotFoundError, RevisionNotFoundError
-from huggingface_hub.hf_file_system import (
+from huggingface_hub_4573 import constants, hf_file_system
+from huggingface_hub_4573.errors import RepositoryNotFoundError, RevisionNotFoundError
+from huggingface_hub_4573.hf_file_system import (
     HfFileSystem,
     HfFileSystemFile,
     HfFileSystemStreamFile,

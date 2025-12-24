@@ -20,7 +20,7 @@ import re
 from pathlib import Path
 from typing import NoReturn
 
-from huggingface_hub import _SUBMOD_ATTRS
+from huggingface_hub_4573 import _SUBMOD_ATTRS
 
 
 INIT_FILE_PATH = Path(__file__).parents[1] / "src" / "huggingface_hub" / "__init__.py"
@@ -43,7 +43,7 @@ def parse_all_definition(content: str) -> list[str]:
     """
     Extract the current __all__ contents from file content.
 
-    This is preferred over "from huggingface_hub import __all__ as current_items" to handle
+    This is preferred over "from huggingface_hub_4573 import __all__ as current_items" to handle
     case where __all__ is not defined or malformed in the file we want to be able to fix
     such issues rather than crash also, we are interested in the file content.
     """

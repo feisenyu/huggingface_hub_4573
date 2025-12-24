@@ -16,7 +16,7 @@ Hub에 파일을 업로드 하려면 허깅페이스 계정으로 로그인해�
 
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.upload_file(
 ...     path_or_fileobj="/path/to/local/folder/README.md",
@@ -32,7 +32,7 @@ Hub에 파일을 업로드 하려면 허깅페이스 계정으로 로그인해�
 업로드할 로컬 폴더의 본 경로, 리포지토리에서 폴더를 업로드할 위치, 대상 리포지토리의 이름을 지정합니다. 리포지토리의 유형을 `dataset`, `model`, `space`로 선택적으로 설정할 수 있습니다.
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 
 # 로컬 폴더에 있는 모든 콘텐츠를 원격 Space에 업로드 합니다.
@@ -110,7 +110,7 @@ CLI 업로드 명령어에 대한 자세한 내용은 [CLI 가이드](./cli#hf-u
 이렇게 하려면 [`upload_file`]과 [[`upload_folder`] 에 `run_as_future` 인수를 사용하고 [`concurrent.futures.Future`](https://docs.python.org/3/library/concurrent.futures.html#future-objects)객체를 반환받아 업로드 상태를 확인하는 데 사용할 수 있습니다.
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> future = api.upload_folder( # 백그라운드에서 업로드 작업 수행 (논블로킹)
 ...     repo_id="username/my-model",
@@ -133,7 +133,7 @@ False
 업로드 메소드에 내장된 `run_as_future` 인수는 본 기능의 별칭입니다.
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.run_as_future(api.create_repo, "username/my-model", exists_ok=True)
 Future(...)
@@ -197,7 +197,7 @@ Hub에 데이터(잠재적으로 수백만 개의 사용자 피드백)를 저장
 >>> import uuid
 >>> from pathlib import Path
 >>> import gradio as gr
->>> from huggingface_hub import CommitScheduler
+>>> from huggingface_hub_4573 import CommitScheduler
 
 # 데이터를 저장할 파일을 선언합니다. UUID를 이용하여 중복을 방지합니다.
 >>> feedback_file = Path("user_feedback/") / f"data_{uuid.uuid4()}.json"
@@ -326,7 +326,7 @@ class ZipScheduler(CommitScheduler):
 1. 파일을 추가하거나 삭제하고 폴더를 삭제하기 위해 적절한 `CommitOperation`을 사용합니다:
 
 ```py
->>> from huggingface_hub import HfApi, CommitOperationAdd, CommitOperationDelete
+>>> from huggingface_hub_4573 import HfApi, CommitOperationAdd, CommitOperationDelete
 >>> api = HfApi()
 >>> operations = [
 ...     CommitOperationAdd(path_in_repo="LICENSE.md", path_or_fileobj="~/repo/LICENSE.md"),
@@ -373,7 +373,7 @@ class ZipScheduler(CommitScheduler):
 다음은 파일을 미리 업로드하는 방법을 보여주는 간단한 예시입니다:
 
 ```py
->>> from huggingface_hub import CommitOperationAdd, preupload_lfs_files, create_commit, create_repo
+>>> from huggingface_hub_4573 import CommitOperationAdd, preupload_lfs_files, create_commit, create_repo
 
 >>> repo_id = create_repo("test_preupload").repo_id
 

@@ -11,21 +11,21 @@ import pytest
 import typer
 from typer.testing import CliRunner
 
-from huggingface_hub.cli._cli_utils import RepoType
-from huggingface_hub.cli.cache import CacheDeletionCounts
-from huggingface_hub.cli.download import download
-from huggingface_hub.cli.hf import app
-from huggingface_hub.cli.upload import _resolve_upload_paths, upload
-from huggingface_hub.errors import RevisionNotFoundError
-from huggingface_hub.hf_api import ModelInfo
-from huggingface_hub.utils import (
+from huggingface_hub_4573.cli._cli_utils import RepoType
+from huggingface_hub_4573.cli.cache import CacheDeletionCounts
+from huggingface_hub_4573.cli.download import download
+from huggingface_hub_4573.cli.hf import app
+from huggingface_hub_4573.cli.upload import _resolve_upload_paths, upload
+from huggingface_hub_4573.errors import RevisionNotFoundError
+from huggingface_hub_4573.hf_api import ModelInfo
+from huggingface_hub_4573.utils import (
     CachedFileInfo,
     CachedRepoInfo,
     CachedRevisionInfo,
     HFCacheInfo,
     SoftTemporaryDirectory,
 )
-from huggingface_hub.utils._verification import FolderVerification
+from huggingface_hub_4573.utils._verification import FolderVerification
 
 from .testing_utils import DUMMY_MODEL_ID
 

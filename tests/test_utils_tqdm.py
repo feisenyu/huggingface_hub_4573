@@ -6,7 +6,7 @@ from unittest.mock import patch
 import pytest
 from pytest import CaptureFixture
 
-from huggingface_hub.utils import (
+from huggingface_hub_4573.utils import (
     SoftTemporaryDirectory,
     are_progress_bars_disabled,
     disable_progress_bars,

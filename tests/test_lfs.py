@@ -4,9 +4,9 @@ from hashlib import sha256
 from io import BytesIO
 from unittest.mock import MagicMock, patch
 
-from huggingface_hub.lfs import UploadInfo, post_lfs_batch_info
-from huggingface_hub.utils import SoftTemporaryDirectory
-from huggingface_hub.utils._lfs import SliceFileObj
+from huggingface_hub_4573.lfs import UploadInfo, post_lfs_batch_info
+from huggingface_hub_4573.utils import SoftTemporaryDirectory
+from huggingface_hub_4573.utils._lfs import SliceFileObj
 
 
 class TestUploadInfo(unittest.TestCase):

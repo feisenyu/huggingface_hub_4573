@@ -13,7 +13,7 @@ rendered properly in your Markdown viewer.
 **1. Hub에 Space 생성하기.**
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> repo_id = "Wauplin/my-cool-training-space"
 >>> api = HfApi()
 
@@ -88,7 +88,7 @@ Space를 생성하거나 복제할 때 보안 정보와 변수를 설정할 수 
 
 ```py
 # `SpaceHardware` enum 사용
->>> from huggingface_hub import SpaceHardware
+>>> from huggingface_hub_4573 import SpaceHardware
 >>> api.request_space_hardware(repo_id=repo_id, hardware=SpaceHardware.T4_MEDIUM)
 
 # 또는 간단히 문자열 값 전달
@@ -185,7 +185,7 @@ Space가 구축되면 업그레이드된 하드웨어가 자동으로 할당됩�
 Space를 다시 시작할 때 지속적으로 디스크 공간에 접근할 수 있는 원하는 저장소 계층을 선택할 수 있습니다. 이는 기존의 하드 드라이브와 같이 디스크에서 읽고 쓸 수 있음을 의미합니다. 자세한 내용은 [문서](https://huggingface.co/docs/hub/spaces-storage#persistent-storage)를 참조하세요.
 
 ```py
->>> from huggingface_hub import SpaceStorage
+>>> from huggingface_hub_4573 import SpaceStorage
 >>> api.request_space_storage(repo_id=repo_id, storage=SpaceStorage.LARGE)
 ```
 
@@ -241,7 +241,7 @@ HF_TOKEN = os.environ.get("HF_TOKEN")
 # Space를 가진 repo_id
 TRAINING_SPACE_ID = "Wauplin/dreambooth-training"
 
-from huggingface_hub import HfApi, SpaceHardware
+from huggingface_hub_4573 import HfApi, SpaceHardware
 api = HfApi(token=HF_TOKEN)
 
 # Space 시작 시 예약된 작업을 확인합니다. 예약된 작업이 있는 경우 모델을 미세 조정합니다. 그렇지 않은 경우,

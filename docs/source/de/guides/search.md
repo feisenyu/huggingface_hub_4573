@@ -12,7 +12,7 @@ Die `huggingface_hub`-Bibliothek enthält einen HTTP-Client [`HfApi`], um mit de
 Unter anderem kann er Modelle, Datensätze und Spaces auflisten, die auf dem Hub gespeichert sind:
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> models = api.list_models()
 ```

@@ -31,7 +31,7 @@ rendered properly in your Markdown viewer.
 
 ```python
 # app.py
-from huggingface_hub import webhook_endpoint, WebhookPayload
+from huggingface_hub_4573 import webhook_endpoint, WebhookPayload
 
 @webhook_endpoint
 async def trigger_training(payload: WebhookPayload) -> None:
@@ -122,7 +122,7 @@ Space 설정 > "Repository secrets" 섹션 > "Add a secret" 로 이동합니다.
 
 ```python
 # app.py
-from huggingface_hub import webhook_endpoint, WebhookPayload
+from huggingface_hub_4573 import webhook_endpoint, WebhookPayload
 
 @webhook_endpoint
 async def trigger_training(payload: WebhookPayload) -> None:
@@ -159,7 +159,7 @@ Webhooks are correctly setup and ready to use:
 ```python
 import gradio as gr
 from fastapi import Request
-from huggingface_hub import WebhooksServer, WebhookPayload
+from huggingface_hub_4573 import WebhooksServer, WebhookPayload
 
 # 1. UI 정의
 with gr.Blocks() as ui:

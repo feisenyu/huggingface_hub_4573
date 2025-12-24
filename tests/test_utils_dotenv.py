@@ -1,5 +1,5 @@
 # AI-generated module (ChatGPT)
-from huggingface_hub.utils._dotenv import load_dotenv
+from huggingface_hub_4573.utils._dotenv import load_dotenv
 
 
 def test_basic_key_value():

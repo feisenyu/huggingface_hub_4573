@@ -15,7 +15,7 @@ Here is an end-to-end example to create and set up a Space on the Hub.
 **1. Create a Space on the Hub.**
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> repo_id = "Wauplin/my-cool-training-space"
 >>> api = HfApi()
 
@@ -97,7 +97,7 @@ Space. See [docs](https://huggingface.co/docs/hub/spaces-gpus) for more details.
 
 ```py
 # Use `SpaceHardware` enum
->>> from huggingface_hub import SpaceHardware
+>>> from huggingface_hub_4573 import SpaceHardware
 >>> api.request_space_hardware(repo_id=repo_id, hardware=SpaceHardware.T4_MEDIUM)
 
 # Or simply pass a string value
@@ -203,7 +203,7 @@ Upgraded hardware will be automatically assigned to your Space once it's built.
 You can choose the storage tier of your choice to access disk space that persists across restarts of your Space. This means you can read and write from disk like you would with a traditional hard drive. See [docs](https://huggingface.co/docs/hub/spaces-storage#persistent-storage) for more details.
 
 ```py
->>> from huggingface_hub import SpaceStorage
+>>> from huggingface_hub_4573 import SpaceStorage
 >>> api.request_space_storage(repo_id=repo_id, storage=SpaceStorage.LARGE)
 ```
 
@@ -273,7 +273,7 @@ HF_TOKEN = os.environ.get("HF_TOKEN")
 # Space own repo_id
 TRAINING_SPACE_ID = "Wauplin/dreambooth-training"
 
-from huggingface_hub import HfApi, SpaceHardware
+from huggingface_hub_4573 import HfApi, SpaceHardware
 api = HfApi(token=HF_TOKEN)
 
 # On Space startup, check if a task is scheduled. If yes, finetune the model. If not,

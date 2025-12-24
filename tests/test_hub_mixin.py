@@ -10,9 +10,9 @@ from unittest.mock import Mock, patch
 import jedi
 import pytest
 
-from huggingface_hub import HfApi, hf_hub_download
-from huggingface_hub.hub_mixin import ModelHubMixin
-from huggingface_hub.utils import SoftTemporaryDirectory
+from huggingface_hub_4573 import HfApi, hf_hub_download
+from huggingface_hub_4573.hub_mixin import ModelHubMixin
+from huggingface_hub_4573.utils import SoftTemporaryDirectory
 
 from .testing_constants import ENDPOINT_STAGING, TOKEN, USER
 from .testing_utils import repo_name
@@ -481,7 +481,7 @@ class HubMixinTest(unittest.TestCase):
         See https://github.com/huggingface/huggingface_hub/issues/2694.
         """
         source = """
-from huggingface_hub import ModelHubMixin
+from huggingface_hub_4573 import ModelHubMixin
 
 class Dummy(ModelHubMixin):
     def dummy_example_for_test(self, x: str) -> str:

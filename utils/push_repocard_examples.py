@@ -19,8 +19,8 @@ from pathlib import Path
 
 import jinja2
 
-from huggingface_hub import DatasetCard, ModelCard, hf_hub_download, upload_file, whoami
-from huggingface_hub.constants import REPOCARD_NAME
+from huggingface_hub_4573 import DatasetCard, ModelCard, hf_hub_download, upload_file, whoami
+from huggingface_hub_4573.constants import REPOCARD_NAME
 
 
 ORG_NAME = "templates"

@@ -13,7 +13,7 @@ for a deeper view of what Model Cards on the Hub are, and how they work under th
 To load an existing card from the Hub, you can use the [`ModelCard.load`] function. Here, we'll load the card from [`nateraw/vit-base-beans`](https://huggingface.co/nateraw/vit-base-beans).
 
 ```python
-from huggingface_hub import ModelCard
+from huggingface_hub_4573 import ModelCard
 
 card = ModelCard.load('nateraw/vit-base-beans')
 ```
@@ -87,7 +87,7 @@ If you have `Jinja2` installed, you can create Model Cards from a jinja template
 ```python
 from pathlib import Path
 
-from huggingface_hub import ModelCard, ModelCardData
+from huggingface_hub_4573 import ModelCard, ModelCardData
 
 # Define your jinja template
 template_text = """
@@ -185,7 +185,7 @@ If you're authenticated with the Hugging Face Hub (either by using `hf auth logi
 First, we'll create a new repo called 'hf-hub-modelcards-pr-test' under the authenticated user's namespace:
 
 ```python
-from huggingface_hub import whoami, create_repo
+from huggingface_hub_4573 import whoami, create_repo
 
 user = whoami()['name']
 repo_id = f'{user}/hf-hub-modelcards-pr-test'
@@ -232,7 +232,7 @@ Now lets see some examples on how to update those metadata.
 Let's start with a first example:
 
 ```python
->>> from huggingface_hub import metadata_update
+>>> from huggingface_hub_4573 import metadata_update
 >>> metadata_update("username/my-cool-model", {"pipeline_tag": "image-classification"})
 ```
 
@@ -243,7 +243,7 @@ By default, you cannot update a key that is already existing on the card. If you
 
 
 ```python
->>> from huggingface_hub import metadata_update
+>>> from huggingface_hub_4573 import metadata_update
 >>> metadata_update("username/my-cool-model", {"pipeline_tag": "text-generation"}, overwrite=True)
 ```
 
@@ -252,7 +252,7 @@ on which you don't have write permission. You can do that by creating a PR on th
 review and merge your suggestions.
 
 ```python
->>> from huggingface_hub import metadata_update
+>>> from huggingface_hub_4573 import metadata_update
 >>> metadata_update("someone/model", {"pipeline_tag": "text-classification"}, create_pr=True)
 ```
 

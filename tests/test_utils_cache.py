@@ -6,9 +6,9 @@ from unittest.mock import Mock
 
 import pytest
 
-from huggingface_hub._snapshot_download import snapshot_download
-from huggingface_hub.utils import DeleteCacheStrategy, HFCacheInfo, _format_size, scan_cache_dir
-from huggingface_hub.utils._cache_manager import CacheNotFound, _try_delete_path
+from huggingface_hub_4573._snapshot_download import snapshot_download
+from huggingface_hub_4573.utils import DeleteCacheStrategy, HFCacheInfo, _format_size, scan_cache_dir
+from huggingface_hub_4573.utils._cache_manager import CacheNotFound, _try_delete_path
 
 from .testing_utils import rmtree_with_retry, skip_on_windows, with_production_testing
 

@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import Mock, call, patch
 
-from huggingface_hub.utils._pagination import paginate
+from huggingface_hub_4573.utils._pagination import paginate
 
 from .testing_utils import handle_injection_in_test
 

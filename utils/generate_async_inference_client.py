@@ -138,7 +138,7 @@ def _add_imports(code: str) -> str:
         repl=(
             r"\1"
             + "from .._common import _async_yield_from\n"
-            + "from huggingface_hub.utils import get_async_session\n"
+            + "from huggingface_hub_4573.utils import get_async_session\n"
             + "from typing import AsyncIterable\n"
             + "from contextlib import AsyncExitStack\n"
             + "from typing import Set\n"

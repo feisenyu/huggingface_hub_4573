@@ -77,7 +77,7 @@ pip install huggingface_hub[inference]
 下载单个文件,请运行以下代码：
 
 ```py
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 
 hf_hub_download(repo_id="tiiuae/falcon-7b-instruct", filename="config.json")
 ```
@@ -85,7 +85,7 @@ hf_hub_download(repo_id="tiiuae/falcon-7b-instruct", filename="config.json")
 如果下载整个存储库，请运行以下代码：
 
 ```py
-from huggingface_hub import snapshot_download
+from huggingface_hub_4573 import snapshot_download
 
 snapshot_download("stabilityai/stable-diffusion-2-1")
 ```
@@ -107,7 +107,7 @@ hf auth login --token $HUGGINGFACE_TOKEN
 要创建一个新存储库，请运行以下代码：
 
 ```py
-from huggingface_hub import create_repo
+from huggingface_hub_4573 import create_repo
 
 create_repo(repo_id="super-cool-model")
 ```
@@ -117,7 +117,7 @@ create_repo(repo_id="super-cool-model")
 上传单个文件,请运行以下代码
 
 ```py
-from huggingface_hub import upload_file
+from huggingface_hub_4573 import upload_file
 
 upload_file(
     path_or_fileobj="/home/lysandre/dummy-test/README.md",
@@ -129,7 +129,7 @@ upload_file(
 如果上传整个存储库，请运行以下代码：
 
 ```py
-from huggingface_hub import upload_folder
+from huggingface_hub_4573 import upload_folder
 
 upload_folder(
     folder_path="/path/to/local/space",

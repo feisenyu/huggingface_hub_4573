@@ -25,8 +25,8 @@ import inspect
 from dataclasses import is_dataclass
 from typing import Any, get_args
 
-from huggingface_hub import InferenceClient
-from huggingface_hub.inference._generated import types
+from huggingface_hub_4573 import InferenceClient
+from huggingface_hub_4573.inference._generated import types
 
 
 METHODS_TO_SKIP = [

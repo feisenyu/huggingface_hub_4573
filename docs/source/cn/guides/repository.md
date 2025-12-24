@@ -28,7 +28,7 @@ Hugging Face Hub是一组 Git 存储库。[Git](https://git-scm.com/)是软件�
 运行以下代码，以创建仓库：
 
 ```py
->>> from huggingface_hub import create_repo
+>>> from huggingface_hub_4573 import create_repo
 >>> create_repo("lysandre/test-model")
 'https://huggingface.co/lysandre/test-model'
 ```
@@ -38,7 +38,7 @@ Hugging Face Hub是一组 Git 存储库。[Git](https://git-scm.com/)是软件�
 请运行以下代码：
 
 ```py
->>> from huggingface_hub import create_repo
+>>> from huggingface_hub_4573 import create_repo
 >>> create_repo("lysandre/test-dataset", repo_type="dataset")
 'https://huggingface.co/datasets/lysandre/test-dataset'
 ```
@@ -48,7 +48,7 @@ Hugging Face Hub是一组 Git 存储库。[Git](https://git-scm.com/)是软件�
 请运行以下代码
 
 ```py
->>> from huggingface_hub import create_repo
+>>> from huggingface_hub_4573 import create_repo
 >>> create_repo("lysandre/test-private", private=True)
 ```
 
@@ -73,7 +73,7 @@ Hugging Face Hub是一组 Git 存储库。[Git](https://git-scm.com/)是软件�
 请运行以下代码：
 
 ```py
->>> from huggingface_hub import duplicate_space
+>>> from huggingface_hub_4573 import duplicate_space
 >>> duplicate_space("multimodalart/dreambooth-training", private=False)
 RepoUrl('https://huggingface.co/spaces/nateraw/dreambooth-training',...)
 ```
@@ -95,7 +95,7 @@ Git存储库通常使用分支来存储同一存储库的不同版本。标签�
 请运行以下代码：
 
 ```py
->>> from huggingface_hub import create_branch, create_tag
+>>> from huggingface_hub_4573 import create_branch, create_tag
 
 # Create a branch on a Space repo from `main` branch
 >>> create_branch("Matthijs/speecht5-tts-demo", repo_type="space", branch="handle-dog-speaker")
@@ -112,7 +112,7 @@ Git存储库通常使用分支来存储同一存储库的不同版本。标签�
 请运行以下代码：
 
 ```py
->>> from huggingface_hub import list_repo_refs
+>>> from huggingface_hub_4573 import list_repo_refs
 >>> api.list_repo_refs("bigcode/the-stack", repo_type="dataset")
 GitRefs(
    branches=[
@@ -139,7 +139,7 @@ GitRefs(
 请运行以下代码将存储库更改为私有：
 
 ```py
->>> from huggingface_hub import update_repo_settings
+>>> from huggingface_hub_4573 import update_repo_settings
 >>> update_repo_settings(repo_id=repo_id, private=True)
 ```
 
@@ -150,6 +150,6 @@ GitRefs(
 请运行以下代码：
 
 ```py
->>> from huggingface_hub import move_repo
+>>> from huggingface_hub_4573 import move_repo
 >>> move_repo(from_id="Wauplin/cool-model", to_id="huggingface/cool-model")
 ```

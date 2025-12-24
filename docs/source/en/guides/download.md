@@ -29,7 +29,7 @@ Select the file to download using the `repo_id`, `repo_type` and `filename` para
 be considered as being part of a `model` repo.
 
 ```python
->>> from huggingface_hub import hf_hub_download
+>>> from huggingface_hub_4573 import hf_hub_download
 >>> hf_hub_download(repo_id="lysandre/arxiv-nlp", filename="config.json")
 '/root/.cache/huggingface/hub/models--lysandre--arxiv-nlp/snapshots/894a9adde21d9a3e3843e6d5aeaaf01875c7fade/config.json'
 
@@ -73,7 +73,7 @@ means all downloaded files are also cached on your local disk. Downloads are mad
 To download a whole repository, just pass the `repo_id` and `repo_type`:
 
 ```python
->>> from huggingface_hub import snapshot_download
+>>> from huggingface_hub_4573 import snapshot_download
 >>> snapshot_download(repo_id="lysandre/arxiv-nlp")
 '/home/lysandre/.cache/huggingface/hub/models--lysandre--arxiv-nlp/snapshots/894a9adde21d9a3e3843e6d5aeaaf01875c7fade'
 
@@ -86,7 +86,7 @@ To download a whole repository, just pass the `repo_id` and `repo_type`:
 `revision` parameter:
 
 ```python
->>> from huggingface_hub import snapshot_download
+>>> from huggingface_hub_4573 import snapshot_download
 >>> snapshot_download(repo_id="lysandre/arxiv-nlp", revision="refs/pr/1")
 ```
 
@@ -103,7 +103,7 @@ based on [`fnmatch`](https://docs.python.org/3/library/fnmatch.html).
 For example, you can use `allow_patterns` to only download JSON configuration files:
 
 ```python
->>> from huggingface_hub import snapshot_download
+>>> from huggingface_hub_4573 import snapshot_download
 >>> snapshot_download(repo_id="lysandre/arxiv-nlp", allow_patterns="*.json")
 ```
 
@@ -111,7 +111,7 @@ On the other hand, `ignore_patterns` can exclude certain files from being downlo
 following example ignores the `.msgpack` and `.h5` file extensions:
 
 ```python
->>> from huggingface_hub import snapshot_download
+>>> from huggingface_hub_4573 import snapshot_download
 >>> snapshot_download(repo_id="lysandre/arxiv-nlp", ignore_patterns=["*.msgpack", "*.h5"])
 ```
 
@@ -119,7 +119,7 @@ Finally, you can combine both to precisely filter your download. Here is an exam
 files except `vocab.json`.
 
 ```python
->>> from huggingface_hub import snapshot_download
+>>> from huggingface_hub_4573 import snapshot_download
 >>> snapshot_download(repo_id="gpt2", allow_patterns=["*.md", "*.json"], ignore_patterns="vocab.json")
 ```
 

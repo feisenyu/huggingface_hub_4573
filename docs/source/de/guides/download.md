@@ -22,7 +22,7 @@ Die [`hf_hub_download`]-Funktion ist die Hauptfunktion zum Herunterladen von Dat
 Wählen Sie die Datei zum Herunterladen anhand der Parameter `repo_id`, `repo_type` und `filename` aus. Standardmäßig wird davon ausgegangen, dass die Datei Teil einer `model`-Repository ist.
 
 ```python
->>> from huggingface_hub import hf_hub_download
+>>> from huggingface_hub_4573 import hf_hub_download
 >>> hf_hub_download(repo_id="lysandre/arxiv-nlp", filename="config.json")
 '/root/.cache/huggingface/hub/models--lysandre--arxiv-nlp/snapshots/894a9adde21d9a3e3843e6d5aeaaf01875c7fade/config.json'
 
@@ -62,7 +62,7 @@ Falls Sie die URL erstellen möchten, die zum Herunterladen einer Datei aus eine
 Um ein ganzes Repository herunterzuladen, geben Sie einfach die `repo_id` und `repo_type` an:
 
 ```python
->>> from huggingface_hub import snapshot_download
+>>> from huggingface_hub_4573 import snapshot_download
 >>> snapshot_download(repo_id="lysandre/arxiv-nlp")
 '/home/lysandre/.cache/huggingface/hub/models--lysandre--arxiv-nlp/snapshots/894a9adde21d9a3e3843e6d5aeaaf01875c7fade'
 
@@ -74,7 +74,7 @@ Um ein ganzes Repository herunterzuladen, geben Sie einfach die `repo_id` und `r
 [`snapshot_download`] lädt standardmäßig die neueste Revision herunter. Wenn Sie eine spezifische Repository-Revision wünschen, verwenden Sie den Parameter `revision`:
 
 ```python
->>> from huggingface_hub import snapshot_download
+>>> from huggingface_hub_4573 import snapshot_download
 >>> snapshot_download(repo_id="lysandre/arxiv-nlp", revision="refs/pr/1")
 ```
 
@@ -87,21 +87,21 @@ Diese Parameter akzeptieren entweder ein einzelnes Muster oder eine Liste von Mu
 Beispielsweise können Sie `allow_patterns` verwenden, um nur JSON-Konfigurationsdateien herunterzuladen:
 
 ```python
->>> from huggingface_hub import snapshot_download
+>>> from huggingface_hub_4573 import snapshot_download
 >>> snapshot_download(repo_id="lysandre/arxiv-nlp", allow_patterns="*.json")
 ```
 
 Andererseits können Sie mit `ignore_patterns` bestimmte Dateien vom Herunterladen ausschließen. Im folgenden Beispiel werden die Dateierweiterungen `.msgpack` und `.h5` ignoriert:
 
 ```python
->>> from huggingface_hub import snapshot_download
+>>> from huggingface_hub_4573 import snapshot_download
 >>> snapshot_download(repo_id="lysandre/arxiv-nlp", ignore_patterns=["*.msgpack", "*.h5"])
 ```
 
 Schließlich können Sie beide kombinieren, um Ihren Download genau zu filtern. Hier ist ein Beispiel, wie man alle json- und markdown-Dateien herunterlädt, außer `vocab.json`.
 
 ```python
->>> from huggingface_hub import snapshot_download
+>>> from huggingface_hub_4573 import snapshot_download
 >>> snapshot_download(repo_id="gpt2", allow_patterns=["*.md", "*.json"], ignore_patterns="vocab.json")
 ```
 

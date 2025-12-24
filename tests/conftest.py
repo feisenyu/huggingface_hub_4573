@@ -6,8 +6,8 @@ import pytest
 from _pytest.fixtures import SubRequest
 
 import huggingface_hub
-from huggingface_hub import constants
-from huggingface_hub.utils import SoftTemporaryDirectory, logging
+from huggingface_hub_4573 import constants
+from huggingface_hub_4573.utils import SoftTemporaryDirectory, logging
 
 from .testing_utils import set_write_permission_and_retry
 
@@ -83,7 +83,7 @@ def vcr_config():
 
 @pytest.fixture(autouse=True)
 def clear_lru_cache():
-    from huggingface_hub.inference._providers.hf_inference import _check_supported_task
+    from huggingface_hub_4573.inference._providers.hf_inference import _check_supported_task
 
     _check_supported_task.cache_clear()
     yield

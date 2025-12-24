@@ -19,7 +19,7 @@ Inferenz ist der Prozess, bei dem ein trainiertes Modell verwendet wird, um Vorh
 Los geht's mit einer Text-zu-Bild-Aufgabe:
 
 ```python
->>> from huggingface_hub import InferenceClient
+>>> from huggingface_hub_4573 import InferenceClient
 >>> client = InferenceClient()
 
 >>> image = client.text_to_image("An astronaut riding a horse on the moon.")
@@ -36,7 +36,7 @@ Wir haben einen [`InferenceClient`] mit den Standardparametern initialisiert. Da
 Was ist, wenn Sie ein bestimmtes Modell verwenden möchten? Sie können es entweder als Parameter angeben oder direkt auf Instanzebene spezifizieren:
 
 ```python
->>> from huggingface_hub import InferenceClient
+>>> from huggingface_hub_4573 import InferenceClient
 # Client für ein spezifisches Modell initialisieren
 >>> client = InferenceClient(model="prompthero/openjourney-v4")
 >>> client.text_to_image(...)
@@ -53,7 +53,7 @@ Was ist, wenn Sie ein bestimmtes Modell verwenden möchten? Sie können es entwe
 Die oben gesehenen Beispiele nutzen die kostenfrei gehostete Inferenz API. Dies erweist sich als sehr nützlich für Prototyping und schnelles Testen. Wenn Sie bereit sind, Ihr Modell in die Produktion zu übernehmen, müssen Sie eine dedizierte Infrastruktur verwenden. Hier kommen [Inferenz Endpunkte](https://huggingface.co/docs/inference-endpoints/index) ins Spiel. Es ermöglicht Ihnen, jedes Modell zu implementieren und als private API freizugeben. Nach der Implementierung erhalten Sie eine URL, zu der Sie mit genau dem gleichen Code wie zuvor eine Verbindung herstellen können, wobei nur der `Modell`-Parameter geändert wird:
 
 ```python
->>> from huggingface_hub import InferenceClient
+>>> from huggingface_hub_4573 import InferenceClient
 >>> client = InferenceClient(model="https://uu149rez6gw9ehej.eu-west-1.aws.endpoints.huggingface.cloud/deepfloyd-if")
 # oder
 >>> client = InferenceClient()
@@ -65,7 +65,7 @@ Die oben gesehenen Beispiele nutzen die kostenfrei gehostete Inferenz API. Dies 
 Aufrufe, die mit dem [`InferenceClient`] gemacht werden, können mit einem [User Access Token](https://huggingface.co/docs/hub/security-tokens) authentifiziert werden. Standardmäßig wird das auf Ihrem Computer gespeicherte Token verwendet, wenn Sie angemeldet sind (sehen Sie hier, [wie Sie sich anmelden können](https://huggingface.co/docs/huggingface_hub/quick-start#login)). Wenn Sie nicht angemeldet sind, können Sie Ihr Token als Instanzparameter übergeben:
 
 ```python
->>> from huggingface_hub import InferenceClient
+>>> from huggingface_hub_4573 import InferenceClient
 >>> client = InferenceClient(token="hf_***")
 ```
 
@@ -124,7 +124,7 @@ Nach der Installation sind alle asynchronen API-Endpunkte über [`AsyncInference
 ```py
 # Der Code muss in einem asyncio-konkurrenten Kontext ausgeführt werden.
 # $ python -m asyncio
->>> from huggingface_hub import AsyncInferenceClient
+>>> from huggingface_hub_4573 import AsyncInferenceClient
 >>> client = AsyncInferenceClient()
 
 >>> image = await client.text_to_image("An astronaut riding a horse on the moon.")
@@ -151,7 +151,7 @@ Bei der Inferenz gibt es zwei Hauptursachen für eine Zeitüberschreitung:
 Der [`InferenceClient`] verfügt über einen globalen Zeitüberschreitungsparameter (`timeout`), um diese beiden Aspekte zu behandeln. Standardmäßig ist er auf `None` gesetzt, was bedeutet, dass der Client unendlich lange auf den Abschluss der Inferenz warten wird. Wenn Sie mehr Kontrolle in Ihrem Arbeitsablauf wünschen, können Sie ihn auf einen bestimmten Wert in Sekunden setzen. Wenn die Zeitüberschreitungsverzögerung abläuft, wird ein [`InferenceTimeoutError`] ausgelöst. Sie können diesen Fehler abfangen und in Ihrem Code behandeln:
 
 ```python
->>> from huggingface_hub import InferenceClient, InferenceTimeoutError
+>>> from huggingface_hub_4573 import InferenceClient, InferenceTimeoutError
 >>> client = InferenceClient(timeout=30)
 >>> try:
 ...     client.text_to_image(...)
@@ -168,7 +168,7 @@ Einige Aufgaben erfordern binäre Eingaben, zum Beispiel bei der Arbeit mit Bild
 - eine URL (`str`) zu einer entfernten Datei (z.B. `https://...`). In diesem Fall wird die Datei lokal heruntergeladen, bevor sie an die Inferenz API gesendet wird.
 
 ```py
->>> from huggingface_hub import InferenceClient
+>>> from huggingface_hub_4573 import InferenceClient
 >>> client = InferenceClient()
 >>> client.image_classification("https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Cute_dog.jpg/320px-Cute_dog.jpg")
 [{'score': 0.9779096841812134, 'label': 'Blenheim spaniel'}, ...]

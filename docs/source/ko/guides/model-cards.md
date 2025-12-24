@@ -15,7 +15,7 @@ Hub에서 기존 카드를 불러오려면 [`ModelCard.load`] 기능을 사용�
 
 
 ```python
-from huggingface_hub import ModelCard
+from huggingface_hub_4573 import ModelCard
 
 card = ModelCard.load('nateraw/vit-base-beans')
 ```
@@ -90,7 +90,7 @@ This model created by [@nateraw](https://github.com/nateraw)
 ```python
 from pathlib import Path
 
-from huggingface_hub import ModelCard, ModelCardData
+from huggingface_hub_4573 import ModelCard, ModelCardData
 
 # jinja 템플릿 정의
 template_text = """
@@ -188,7 +188,7 @@ Hugging Face Hub로 인증받은 경우(`hf auth login` 또는 [`login`] 사용)
 먼저 인증된 사용자의 네임스페이스 아래에 'hf-hub-modelcards-pr-test'라는 새로운 레포지토리를 만듭니다:
 
 ```python
-from huggingface_hub import whoami, create_repo
+from huggingface_hub_4573 import whoami, create_repo
 
 user = whoami()['name']
 repo_id = f'{user}/hf-hub-modelcards-pr-test'
@@ -234,7 +234,7 @@ card.push_to_hub(repo_id, create_pr=True)
 첫 번째 예부터 살펴보겠습니다:
 
 ```python
->>> from huggingface_hub import metadata_update
+>>> from huggingface_hub_4573 import metadata_update
 >>> metadata_update("username/my-cool-model", {"pipeline_tag": "image-classification"})
 ```
 
@@ -243,14 +243,14 @@ card.push_to_hub(repo_id, create_pr=True)
 기본적으로 카드에 이미 존재하는 키는 업데이트할 수 없습니다. 그렇게 하려면 `overwrite=True`를 명시적으로 전달해야 합니다.
 
 ```python
->>> from huggingface_hub import metadata_update
+>>> from huggingface_hub_4573 import metadata_update
 >>> metadata_update("username/my-cool-model", {"pipeline_tag": "text-generation"}, overwrite=True)
 ```
 
 쓰기 권한이 없는 저장소에 일부 변경 사항을 제안하려는 경우가 종종 있습니다. 소유자가 귀하의 제안을 검토하고 병합할 수 있도록 해당 저장소에 PR을 생성하면 됩니다.
 
 ```python
->>> from huggingface_hub import metadata_update
+>>> from huggingface_hub_4573 import metadata_update
 >>> metadata_update("someone/model", {"pipeline_tag": "text-classification"}, create_pr=True)
 ```
 

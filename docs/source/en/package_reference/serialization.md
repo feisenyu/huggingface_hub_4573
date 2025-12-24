@@ -21,7 +21,7 @@ Here is how to export a folder containing different parts of a diffusion model u
 
 ```python
 # Export a folder as a DDUF file
->>> from huggingface_hub import export_folder_as_dduf
+>>> from huggingface_hub_4573 import export_folder_as_dduf
 >>> export_folder_as_dduf("FLUX.1-dev.dduf", folder_path="path/to/FLUX.1-dev")
 ```
 
@@ -29,7 +29,7 @@ For more flexibility, you can use [`export_entries_as_dduf`] and pass a list of 
 
 ```python
 # Export specific files from the local disk.
->>> from huggingface_hub import export_entries_as_dduf
+>>> from huggingface_hub_4573 import export_entries_as_dduf
 >>> export_entries_as_dduf(
 ...     dduf_path="stable-diffusion-v1-4-FP16.dduf",
 ...     entries=[ # List entries to add to the DDUF file (here, only FP16 weights)
@@ -51,7 +51,7 @@ The `entries` parameter also supports passing an iterable of paths or bytes. Thi
 >>> from diffusers import DiffusionPipeline
 >>> from typing import Generator, Tuple
 >>> import safetensors.torch
->>> from huggingface_hub import export_entries_as_dduf
+>>> from huggingface_hub_4573 import export_entries_as_dduf
 >>> pipe = DiffusionPipeline.from_pretrained("CompVis/stable-diffusion-v1-4")
 ... # ... do some work with the pipeline
 
@@ -75,7 +75,7 @@ The `entries` parameter also supports passing an iterable of paths or bytes. Thi
 ```python
 >>> import json
 >>> import safetensors.torch
->>> from huggingface_hub import read_dduf_file
+>>> from huggingface_hub_4573 import read_dduf_file
 
 # Read DDUF metadata
 >>> dduf_entries = read_dduf_file("FLUX.1-dev.dduf")

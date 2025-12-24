@@ -122,7 +122,7 @@ def push_to_hub(model: MyModelClass, repo_name: str) -> None:
 ```python
 >>> import torch
 >>> import torch.nn as nn
->>> from huggingface_hub import PyTorchModelHubMixin
+>>> from huggingface_hub_4573 import PyTorchModelHubMixin
 
 
 # PyTorch 모델을 여러분이 흔히 사용하는 방식과 완전히 동일하게 정의하세요.
@@ -162,7 +162,7 @@ def push_to_hub(model: MyModelClass, repo_name: str) -> None:
 128
 
 # 모델 카드가 올바르게 작성되었습니다.
->>> from huggingface_hub import ModelCard
+>>> from huggingface_hub_4573 import ModelCard
 >>> card = ModelCard.load("username/my-awesome-model")
 >>> card.data.tags
 ["keras", "pytorch_model_hub_mixin", "model_hub_mixin"]
@@ -177,7 +177,7 @@ def push_to_hub(model: MyModelClass, repo_name: str) -> None:
 1. 클래스를 `ModelHubMixin`으로부터 상속하세요:
 
 ```python
-from huggingface_hub import ModelHubMixin
+from huggingface_hub_4573 import ModelHubMixin
 
 class PyTorchModelHubMixin(ModelHubMixin):
    (...)
@@ -186,7 +186,7 @@ class PyTorchModelHubMixin(ModelHubMixin):
 2. `_save_pretrained` 메소드를 구현하세요:
 
 ```py
-from huggingface_hub import ModelHubMixin
+from huggingface_hub_4573 import ModelHubMixin
 
 class PyTorchModelHubMixin(ModelHubMixin):
    (...)
@@ -300,7 +300,7 @@ class VoiceCraft(
 마지막으로, 모델 카드 생성 프로세스를 동적 값으로 확장하려면 [`~ModelHubMixin.generate_model_card`] 메소드를 재정의할 수 있습니다:
 
 ```py
-from huggingface_hub import ModelCard, PyTorchModelHubMixin
+from huggingface_hub_4573 import ModelCard, PyTorchModelHubMixin
 
 class UniDepthV1(nn.Module, PyTorchModelHubMixin, ...):
    (...)

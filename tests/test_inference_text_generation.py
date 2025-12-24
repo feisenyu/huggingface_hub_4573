@@ -8,16 +8,16 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from huggingface_hub import InferenceClient, TextGenerationOutputPrefillToken
-from huggingface_hub.errors import HfHubHTTPError
-from huggingface_hub.inference._common import (
+from huggingface_hub_4573 import InferenceClient, TextGenerationOutputPrefillToken
+from huggingface_hub_4573.errors import HfHubHTTPError
+from huggingface_hub_4573.inference._common import (
     _UNSUPPORTED_TEXT_GENERATION_KWARGS,
     GenerationError,
     IncompleteGenerationError,
     OverloadedError,
     raise_text_generation_error,
 )
-from huggingface_hub.inference._common import ValidationError as TextGenerationValidationError
+from huggingface_hub_4573.inference._common import ValidationError as TextGenerationValidationError
 
 from .testing_utils import with_production_testing
 

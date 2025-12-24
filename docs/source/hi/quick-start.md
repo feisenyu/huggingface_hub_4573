@@ -29,7 +29,7 @@ pip install --upgrade huggingface_hub
 उदाहरण के लिए, [Pegasus](https://huggingface.co/google/pegasus-xsum) मॉडल कॉन्फ़िगरेशन फ़ाइल डाउनलोड करने के लिए:
 
 ```py
->>> from huggingface_hub import hf_hub_download
+>>> from huggingface_hub_4573 import hf_hub_download
 >>> hf_hub_download(repo_id="google/pegasus-xsum", filename="config.json")
 ```
 
@@ -37,7 +37,7 @@ pip install --upgrade huggingface_hub
 यदि आप कमिट हैश का उपयोग करना चुनते हैं, तो यह छोटे 7-वर्ण कमिट हैश के बजाय पूर्ण-लंबाई वाला हैश होना चाहिए:
 
 ```py
->>> from huggingface_hub import hf_hub_download
+>>> from huggingface_hub_4573 import hf_hub_download
 >>> hf_hub_download(
 ...     repo_id="google/pegasus-xsum",
 ...     filename="config.json",
@@ -71,7 +71,7 @@ hf auth login
 वैकल्पिक रूप से, आप किसी नोटबुक या स्क्रिप्ट में [`login`] का उपयोग करके प्रोग्रामेटिक रूप से लॉगिन कर सकते हैं:
 
 ```py
->>> from huggingface_hub import login
+>>> from huggingface_hub_4573 import login
 >>> login()
 ```
 
@@ -107,7 +107,7 @@ hf auth switch
 अंत में, `token` को पैरामीटर के रूप में स्वीकार करने वाली किसी भी विधि में अपना टोकन पास करके प्रमाणित करना भी संभव है।
 
 ```
-from huggingface_hub import whoami
+from huggingface_hub_4573 import whoami
 
 user = whoami(token=...)
 ```
@@ -122,7 +122,7 @@ user = whoami(token=...)
 फ़ंक्शन के साथ एक रिपॉजिटरी बनाएँ:
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.create_repo(repo_id="super-cool-model")
 ```
@@ -130,7 +130,7 @@ user = whoami(token=...)
 यदि आप चाहते हैं कि आपकी रिपॉजिटरी निजी हो, तो:
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.create_repo(repo_id="super-cool-model", private=True)
 ```
@@ -152,7 +152,7 @@ user = whoami(token=...)
 3. रिपॉजिटरी आईडी जहाँ आप फ़ाइल जोड़ना चाहते हैं।
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.upload_file(
 ...     path_or_fileobj="/home/lysandre/dummy-test/README.md",

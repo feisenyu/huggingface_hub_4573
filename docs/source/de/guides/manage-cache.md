@@ -115,7 +115,7 @@ Sie gibt entweder den Dateipfad zurück (falls vorhanden und im Cache gespeicher
 oder `None` (wenn wir es nicht wissen).
 
 ```python
-from huggingface_hub import try_to_load_from_cache, _CACHED_NO_EXIST
+from huggingface_hub_4573 import try_to_load_from_cache, _CACHED_NO_EXIST
 
 filepath = try_to_load_from_cache()
 if isinstance(filepath, str):
@@ -184,7 +184,7 @@ Diese Bibliotheken können dann die Werkzeuge von `huggingface_hub` nutzen, um d
 insbesondere um Teile der Assets über einen CLI-Befehl zu scannen und zu löschen.
 
 ```py
-from huggingface_hub import cached_assets_path
+from huggingface_hub_4573 import cached_assets_path
 
 assets_path = cached_assets_path(library_name="datasets", namespace="SQuAD", subfolder="download")
 something_path = assets_path / "something.json" # Machen Sie, was Sie möchten, in Ihrem Assets-Ordner!
@@ -300,7 +300,7 @@ Sie können es verwenden, um einen detaillierten Bericht zu erhalten, der um 4 D
 Hier ist ein einfaches Anwendungs-Beispiel in Python. Siehe Referenz für Details.
 
 ```py
->>> from huggingface_hub import scan_cache_dir
+>>> from huggingface_hub_4573 import scan_cache_dir
 
 >>> hf_cache_info = scan_cache_dir()
 HFCacheInfo(
@@ -433,7 +433,7 @@ Für mehr Flexibilität können Sie auch die Methode [`~HFCacheInfo.delete_revis
 Hier ist ein einfaches Beispiel. Siehe Referenz für Details.
 
 ```py
->>> from huggingface_hub import scan_cache_dir
+>>> from huggingface_hub_4573 import scan_cache_dir
 
 >>> delete_strategy = scan_cache_dir().delete_revisions(
 ...     "81fd1d6e7847c99f5862c9fb81387956d99ec7aa"

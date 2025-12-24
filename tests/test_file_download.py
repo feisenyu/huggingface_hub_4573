@@ -26,10 +26,10 @@ import httpx
 import pytest
 
 import huggingface_hub.file_download
-from huggingface_hub import HfApi, RepoUrl, constants
-from huggingface_hub._local_folder import write_download_metadata
-from huggingface_hub.errors import EntryNotFoundError, GatedRepoError, LocalEntryNotFoundError
-from huggingface_hub.file_download import (
+from huggingface_hub_4573 import HfApi, RepoUrl, constants
+from huggingface_hub_4573._local_folder import write_download_metadata
+from huggingface_hub_4573.errors import EntryNotFoundError, GatedRepoError, LocalEntryNotFoundError
+from huggingface_hub_4573.file_download import (
     _CACHED_NO_EXIST,
     HfFileMetadata,
     _check_disk_space,
@@ -42,9 +42,9 @@ from huggingface_hub.file_download import (
     http_get,
     try_to_load_from_cache,
 )
-from huggingface_hub.utils import SoftTemporaryDirectory, get_session, hf_raise_for_status
-from huggingface_hub.utils._headers import build_hf_headers
-from huggingface_hub.utils._http import _http_backoff_base
+from huggingface_hub_4573.utils import SoftTemporaryDirectory, get_session, hf_raise_for_status
+from huggingface_hub_4573.utils._headers import build_hf_headers
+from huggingface_hub_4573.utils._http import _http_backoff_base
 
 from .testing_constants import ENDPOINT_STAGING, OTHER_TOKEN, TOKEN
 from .testing_utils import (

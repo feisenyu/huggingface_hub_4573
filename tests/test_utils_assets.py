@@ -4,7 +4,7 @@ from unittest.mock import patch
 
 import pytest
 
-from huggingface_hub import cached_assets_path
+from huggingface_hub_4573 import cached_assets_path
 
 
 @pytest.mark.usefixtures("fx_cache_dir")

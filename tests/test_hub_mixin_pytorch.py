@@ -9,11 +9,11 @@ from unittest.mock import Mock, patch
 
 import pytest
 
-from huggingface_hub import HfApi, ModelCard, constants, hf_hub_download
-from huggingface_hub.errors import RemoteEntryNotFoundError
-from huggingface_hub.hub_mixin import ModelHubMixin, PyTorchModelHubMixin
-from huggingface_hub.serialization._torch import storage_ptr
-from huggingface_hub.utils import SoftTemporaryDirectory, is_torch_available
+from huggingface_hub_4573 import HfApi, ModelCard, constants, hf_hub_download
+from huggingface_hub_4573.errors import RemoteEntryNotFoundError
+from huggingface_hub_4573.hub_mixin import ModelHubMixin, PyTorchModelHubMixin
+from huggingface_hub_4573.serialization._torch import storage_ptr
+from huggingface_hub_4573.utils import SoftTemporaryDirectory, is_torch_available
 
 from .testing_constants import ENDPOINT_STAGING, TOKEN, USER
 from .testing_utils import repo_name, requires

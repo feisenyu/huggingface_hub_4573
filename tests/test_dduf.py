@@ -6,8 +6,8 @@ from typing import Iterable, Union
 import pytest
 from pytest_mock import MockerFixture
 
-from huggingface_hub.errors import DDUFCorruptedFileError, DDUFExportError, DDUFInvalidEntryNameError
-from huggingface_hub.serialization._dduf import (
+from huggingface_hub_4573.errors import DDUFCorruptedFileError, DDUFExportError, DDUFInvalidEntryNameError
+from huggingface_hub_4573.serialization._dduf import (
     DDUFEntry,
     _load_content,
     _validate_dduf_entry_name,

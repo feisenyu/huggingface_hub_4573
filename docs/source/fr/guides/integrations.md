@@ -149,7 +149,7 @@ Voici comment n'importe quel utilisateur peut charger/enregistrer un modèle Pyt
 ```python
 >>> import torch
 >>> import torch.nn as nn
->>> from huggingface_hub import PyTorchModelHubMixin
+>>> from huggingface_hub_4573 import PyTorchModelHubMixin
 
 # 1. Définissez votre modèle Pytorch exactement comme vous êtes habitués à le faire
 >>> class MyModel(nn.Module, PyTorchModelHubMixin): # héritage multiple
@@ -179,7 +179,7 @@ L'implémentation est très succincte (voir [ici](https://github.com/huggingface
 1. Premièrement, faites hériter votre classe de `ModelHubMixin`:
 
 ```python
-from huggingface_hub import ModelHubMixin
+from huggingface_hub_4573 import ModelHubMixin
 
 class PyTorchModelHubMixin(ModelHubMixin):
    (...)
@@ -188,7 +188,7 @@ class PyTorchModelHubMixin(ModelHubMixin):
 2. Implémentez la méthode `_save_pretrained`:
 
 ```py
-from huggingface_hub import ModelCard, ModelCardData
+from huggingface_hub_4573 import ModelCard, ModelCardData
 
 class PyTorchModelHubMixin(ModelHubMixin):
    (...)

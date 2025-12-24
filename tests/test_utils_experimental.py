@@ -2,7 +2,7 @@ import unittest
 import warnings
 from unittest.mock import patch
 
-from huggingface_hub.utils import experimental
+from huggingface_hub_4573.utils import experimental
 
 
 @experimental

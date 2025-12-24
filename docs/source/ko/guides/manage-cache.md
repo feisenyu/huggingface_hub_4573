@@ -89,7 +89,7 @@ Hub로부터 모든 파일이 이 폴더들 안에 다운로드됩니다. 캐싱
 HTTP 요청을 만들지 않고 로컬로 캐시된 파일이 있는지 테스트하려면, [`try_to_load_from_cache`] 헬퍼를 사용할 수 있습니다. 이것은 파일이 존재하고 캐시된 경우에는 파일 경로를, 존재하지 않음이 캐시된 경우에는 `_CACHED_NO_EXIST` 객체를, 알 수 없는 경우에는 `None`을 반환합니다.
 
 ```python
-from huggingface_hub import try_to_load_from_cache, _CACHED_NO_EXIST
+from huggingface_hub_4573 import try_to_load_from_cache, _CACHED_NO_EXIST
 
 filepath = try_to_load_from_cache()
 if isinstance(filepath, str):
@@ -138,7 +138,7 @@ Windows 기기에서 심볼릭 링크 기반 캐시 시스템의 이점을 누�
 Hub에서 파일을 캐시하는 것 외에도, 하위 라이브러리들은 종종 `huggingface_hub`에 직접 처리되지 않는 HF와 관련된 다른 파일을 캐시해야 할 때가 있습니다 (예: GitHub에서 다운로드한 파일, 전처리된 데이터, 로그 등). 이러한 파일, 즉 '자산(assets)'을 캐시하기 위해 [`cached_assets_path`]를 사용할 수 있습니다. 이 헬퍼는 요청한 라이브러리의 이름과 선택적으로 네임스페이스 및 하위 폴더 이름을 기반으로 HF 캐시의 경로를 통일된 방식으로 생성합니다. 목표는 모든 하위 라이브러리가 자산을 자체 방식대로(예: 구조에 대한 규칙 없음) 관리할 수 있도록 하는 것입니다. 그러나 올바른 자산 폴더 내에 있어야 합니다. 그러한 라이브러리는 `huggingface_hub`의 도구를 활용하여 캐시를 관리할 수 있으며, 특히 CLI 명령을 통해 자산의 일부를 스캔하고 삭제할 수 있습니다.
 
 ```py
-from huggingface_hub import cached_assets_path
+from huggingface_hub_4573 import cached_assets_path
 
 assets_path = cached_assets_path(library_name="datasets", namespace="SQuAD", subfolder="download")
 something_path = assets_path / "something.json" # 자산 폴더에서 원하는 대로 작업하세요!
@@ -253,7 +253,7 @@ model/t5-small                       8f3ad1c90fed7a62    820.1M 2 weeks ago   re
 다음은 간단한 사용 예시입니다. 자세한 내용은 참조 문서를 참고하세요.
 
 ```py
->>> from huggingface_hub import scan_cache_dir
+>>> from huggingface_hub_4573 import scan_cache_dir
 
 >>> hf_cache_info = scan_cache_dir()
 HFCacheInfo(
@@ -369,7 +369,7 @@ Deleted 3 unreferenced revision(s); freed 2.4G.
 더 유연하게 사용하려면, 프로그래밍 방식으로 [`~HFCacheInfo.delete_revisions`] 메소드를 사용할 수도 있습니다. 간단한 예제를 살펴보겠습니다. 자세한 내용은 참조 문서를 확인하세요.
 
 ```py
->>> from huggingface_hub import scan_cache_dir
+>>> from huggingface_hub_4573 import scan_cache_dir
 
 >>> delete_strategy = scan_cache_dir().delete_revisions(
 ...     "81fd1d6e7847c99f5862c9fb81387956d99ec7aa"

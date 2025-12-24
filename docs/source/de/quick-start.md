@@ -26,7 +26,7 @@ Sie benötigen die Repository-ID und den Dateinamen der Datei, die Sie herunterl
 Beispiel, um die Konfigurationsdatei des [Pegasus](https://huggingface.co/google/pegasus-xsum) Modells herunterzuladen:
 
 ```py
->>> from huggingface_hub import hf_hub_download
+>>> from huggingface_hub_4573 import hf_hub_download
 >>> hf_hub_download(repo_id="google/pegasus-xsum", filename="config.json")
 ```
 
@@ -35,7 +35,7 @@ Namen der Branch, des Tags oder des Commit-Hashes anzugeben. Wenn Sie sich für 
 entscheiden, muss es der vollständige Hash anstelle des kürzeren 7-Zeichen-Commit-Hashes sein:
 
 ```py
->>> from huggingface_hub import hf_hub_download
+>>> from huggingface_hub_4573 import hf_hub_download
 >>> hf_hub_download(
 ...     repo_id="google/pegasus-xsum",
 ...     filename="config.json",
@@ -61,7 +61,7 @@ hf auth login --token $HUGGINGFACE_TOKEN
 Alternativ können Sie sich auch programmatisch in einem Notebook oder einem Skript mit [`login`] anmelden:
 
 ```py
->>> from huggingface_hub import login
+>>> from huggingface_hub_4573 import login
 >>> login()
 ```
 
@@ -77,7 +77,7 @@ Sie können nur auf 1 Konto gleichzeitig angemeldet sein. Wenn Sie Ihren Compute
 Nachdem Sie sich registriert und angemeldet haben, können Sie mit der Funktion [`create_repo`] ein Repository erstellen:
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.create_repo(repo_id="super-cool-model")
 ```
@@ -85,7 +85,7 @@ Nachdem Sie sich registriert und angemeldet haben, können Sie mit der Funktion 
 If you want your repository to be private, then:
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.create_repo(repo_id="super-cool-model", private=True)
 ```
@@ -104,7 +104,7 @@ Verwenden Sie die [`upload_file`]-Funktion, um eine Datei zu Ihrem neu erstellte
 3. Die Repository-ID, zu der Sie die Datei hinzufügen möchten.
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.upload_file(
 ...     path_or_fileobj="/home/lysandre/dummy-test/README.md",

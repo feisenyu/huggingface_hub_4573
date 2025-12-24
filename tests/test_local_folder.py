@@ -25,7 +25,7 @@ from pathlib import Path, WindowsPath
 
 import pytest
 
-from huggingface_hub._local_folder import (
+from huggingface_hub_4573._local_folder import (
     LocalDownloadFileMetadata,
     LocalDownloadFilePaths,
     LocalUploadFilePaths,

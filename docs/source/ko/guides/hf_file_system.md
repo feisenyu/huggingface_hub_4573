@@ -9,7 +9,7 @@ rendered properly in your Markdown viewer.
 ## 사용법[[usage]]
 
 ```python
->>> from huggingface_hub import hffs
+>>> from huggingface_hub_4573 import hffs
 
 >>> # 디렉터리의 모든 파일 나열하기
 >>> hffs.ls("datasets/my-username/my-dataset-repo/data", detail=False)
@@ -65,7 +65,7 @@ hf://[<repo_type_prefix>]<repo_id>[@<revision>]/<path/in/repo>
 * [DuckDB](https://duckdb.org/docs/guides/python/filesystems)를 사용하여 (원격) Hub 파일 쿼리:
 
   ```python
-  >>> from huggingface_hub import HfFileSystem
+  >>> from huggingface_hub_4573 import HfFileSystem
   >>> import duckdb
 
   >>> fs = HfFileSystem()
@@ -101,7 +101,7 @@ hf://[<repo_type_prefix>]<repo_id>[@<revision>]/<path/in/repo>
 또한 [`HfFileSystem`]에 `token`을 인수로 전달하여 프로그래밍 방식으로 로그인할 수 있습니다:
 
 ```python
->>> from huggingface_hub import HfFileSystem
+>>> from huggingface_hub_4573 import HfFileSystem
 >>> hffs = HfFileSystem(token=token)
 ```
 

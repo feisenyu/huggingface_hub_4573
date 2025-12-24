@@ -20,7 +20,7 @@ from pathlib import Path
 import pytest
 import yaml
 
-from huggingface_hub import (
+from huggingface_hub_4573 import (
     DatasetCard,
     DatasetCardData,
     EvalResult,
@@ -37,12 +37,12 @@ from huggingface_hub import (
     metadata_save,
     metadata_update,
 )
-from huggingface_hub.errors import EntryNotFoundError
-from huggingface_hub.file_download import hf_hub_download
-from huggingface_hub.hf_api import HfApi
-from huggingface_hub.repocard import REGEX_YAML_BLOCK
-from huggingface_hub.repocard_data import CardData
-from huggingface_hub.utils import SoftTemporaryDirectory, is_jinja_available
+from huggingface_hub_4573.errors import EntryNotFoundError
+from huggingface_hub_4573.file_download import hf_hub_download
+from huggingface_hub_4573.hf_api import HfApi
+from huggingface_hub_4573.repocard import REGEX_YAML_BLOCK
+from huggingface_hub_4573.repocard_data import CardData
+from huggingface_hub_4573.utils import SoftTemporaryDirectory, is_jinja_available
 
 from .testing_constants import ENDPOINT_STAGING, TOKEN, USER
 from .testing_utils import repo_name, with_production_testing

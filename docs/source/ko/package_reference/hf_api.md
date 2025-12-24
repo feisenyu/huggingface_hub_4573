@@ -14,7 +14,7 @@ rendered properly in your Markdown viewer.
 다른 엔드포인트를 제공하거나 사용자정의 에이전트를 구성할 수도 있습니다.
 
 ```python
-from huggingface_hub import HfApi, list_models
+from huggingface_hub_4573 import HfApi, list_models
 
 # 루트 메서드를 사용하세요.
 models = list_models()

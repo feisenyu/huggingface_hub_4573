@@ -4,7 +4,7 @@ from unittest.mock import Mock
 import pytest
 from httpx import Request, Response
 
-from huggingface_hub.errors import (
+from huggingface_hub_4573.errors import (
     BadRequestError,
     DisabledRepoError,
     EntryNotFoundError,
@@ -12,7 +12,7 @@ from huggingface_hub.errors import (
     RepositoryNotFoundError,
     RevisionNotFoundError,
 )
-from huggingface_hub.utils._http import REPO_API_REGEX, X_AMZN_TRACE_ID, X_REQUEST_ID, _format, hf_raise_for_status
+from huggingface_hub_4573.utils._http import REPO_API_REGEX, X_AMZN_TRACE_ID, X_REQUEST_ID, _format, hf_raise_for_status
 
 
 class TestErrorUtils(unittest.TestCase):

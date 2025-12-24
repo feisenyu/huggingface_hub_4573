@@ -24,7 +24,7 @@ Wenn Sie Dateien auf den Hub hochladen möchten, müssen Sie sich bei Ihrem Hugg
 - Alternativ können Sie sich in einem Notebook oder einem Skript programmatisch mit [`login`] anmelden:
 
   ```python
-  >>> from huggingface_hub import login
+  >>> from huggingface_hub_4573 import login
   >>> login()
   ```
 
@@ -39,7 +39,7 @@ Sobald Sie ein Repository mit [`create_repo`] erstellt haben, können Sie mit [`
 Geben Sie den Pfad der hochzuladenden Datei, den Ort, an den Sie die Datei im Repository hochladen möchten, und den Namen des Repositories an, zu dem Sie die Datei hinzufügen möchten. Abhängig von Ihrem Repository-Typ können Sie optional den Repository-Typ als `dataset`, `model`, oder `space` festlegen.
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.upload_file(
 ...     path_or_fileobj="/path/to/local/folder/README.md",
@@ -54,7 +54,7 @@ Geben Sie den Pfad der hochzuladenden Datei, den Ort, an den Sie die Datei im Re
 Verwenden Sie die Funktion [`upload_folder`], um einen lokalen Ordner in ein vorhandenes Repository hochzuladen. Geben Sie den Pfad des lokalen Ordners an, den Sie hochladen möchten, an welchem Ort Sie den Ordner im Repository hochladen möchten, und den Namen des Repositories, zu dem Sie den Ordner hinzufügen möchten. Abhängig von Ihrem Repository-Typ können Sie optional den Repository-Typ als `dataset`, `model`, oder `space` festlegen.
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 
 # Den gesamten Inhalt aus dem lokalen Ordner in den entfernten Space hoch laden.
@@ -104,7 +104,7 @@ In den meisten Fällen benötigen Sie nicht mehr als [`upload_file`] und [`uploa
 In einigen Fällen möchten Sie Daten hochladen, ohne Ihren Hauptthread zu blockieren. Dies ist besonders nützlich, um Protokolle und Artefakte hochzuladen, während Sie weiter trainieren. Um dies zu tun, können Sie das Argument `run_as_future` in beiden [`upload_file`] und [`upload_folder`] verwenden. Dies gibt ein [`concurrent.futures.Future`](https://docs.python.org/3/library/concurrent.futures.html#future-objects)-Objekt zurück, mit dem Sie den Status des Uploads überprüfen können.
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> future = api.upload_folder( # Hochladen im Hintergrund (nicht blockierende Aktion)
 ...     repo_id="username/my-model",
@@ -125,7 +125,7 @@ False
 Auch wenn Hintergrundaufgaben hauptsächlich dazu dienen, Daten hochzuladen/Commits zu erstellen, können Sie jede gewünschte Methode in die Warteschlange stellen, indem Sie [`run_as_future`] verwenden. Sie können es beispielsweise verwenden, um ein Repo zu erstellen und dann Daten im Hintergrund dorthin hochzuladen. Das integrierte Argument `run_as_future` in Upload-Methoden ist lediglich ein Alias dafür.
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.run_as_future(api.create_repo, "username/my-model", exists_ok=True)
 Future(...)
@@ -172,7 +172,7 @@ Die Idee besteht darin, einen Hintergrundjob auszuführen, der regelmäßig eine
 >>> import uuid
 >>> from pathlib import Path
 >>> import gradio as gr
->>> from huggingface_hub import CommitScheduler
+>>> from huggingface_hub_4573 import CommitScheduler
 
 # Definieren Sie die Datei, in der die Daten gespeichert werden sollen. Verwenden Sie UUID, um sicherzustellen, dass vorhandene Daten aus einem früheren Lauf nicht überschrieben werden.
 >>> feedback_file = Path("user_feedback/") / f"data_{uuid.uuid4()}.json"
@@ -279,7 +279,7 @@ Zum Beispiel, wenn Sie zwei Dateien hochladen und eine Datei in einem Hub-Reposi
 1. Verwenden Sie die entsprechende `CommitOperation`, um eine Datei hinzuzufügen oder zu löschen und einen Ordner zu löschen:
 
 ```py
->>> from huggingface_hub import HfApi, CommitOperationAdd, CommitOperationDelete
+>>> from huggingface_hub_4573 import HfApi, CommitOperationAdd, CommitOperationDelete
 >>> api = HfApi()
 >>> operations = [
 ...     CommitOperationAdd(path_in_repo="LICENSE.md", path_or_fileobj="~/repo/LICENSE.md"),
@@ -381,7 +381,7 @@ Der `commit` Kontextmanager handhabt vier der gängigsten Git-Befehle: pull, add
 4. Schickt die Änderung an das `text-files` Repository.
 
 ```python
->>> from huggingface_hub import Repository
+>>> from huggingface_hub_4573 import Repository
 >>> with Repository(local_dir="text-files", clone_from="<user>/text-files").commit(commit_message="Mein erste Datei :)"):
 ...     with open("file.txt", "w+") as f:
 ...         f.write(json.dumps({"hey": 8}))
@@ -437,7 +437,7 @@ Die Klasse [`Repository`] hat eine Funktion [`~Repository.push_to_hub`], um Date
 Zum Beispiel, wenn Sie bereits ein Repository vom Hub geklont haben, können Sie das `repo` vom lokalen Verzeichnis initialisieren:
 
 ```python
->>> from huggingface_hub import Repository
+>>> from huggingface_hub_4573 import Repository
 >>> repo = Repository(local_dir="pfad/zur/lokalen/repo")
 ```
 Aktualisieren Sie Ihren lokalen Klon mit [`~Repository.git_pull`] und dann pushen Sie Ihre Datei zum Hub:

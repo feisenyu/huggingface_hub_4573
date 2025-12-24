@@ -24,7 +24,7 @@ import starlette.datastructures
 from fastapi import FastAPI, Request
 from fastapi.testclient import TestClient
 
-from huggingface_hub._oauth import (
+from huggingface_hub_4573._oauth import (
     _get_mocked_oauth_info,
     _get_oauth_uris,
     attach_huggingface_oauth,

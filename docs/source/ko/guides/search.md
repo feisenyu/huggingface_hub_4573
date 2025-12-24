@@ -12,7 +12,7 @@ rendered properly in your Markdown viewer.
 이를 통해, Hub에 저장된 모델, 데이터셋, 그리고 Spaces를 나열할 수 있습니다.
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> models = api.list_models()
 ```

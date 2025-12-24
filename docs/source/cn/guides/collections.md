@@ -18,7 +18,7 @@
 让我们获取`"TheBloke/recent-models-64f9a55bb3115b4f513ec026"`这个集合:
 
 ```py
->>> from huggingface_hub import get_collection
+>>> from huggingface_hub_4573 import get_collection
 >>> collection = get_collection("TheBloke/recent-models-64f9a55bb3115b4f513ec026")
 >>> collection
 Collection(
@@ -61,7 +61,7 @@ CollectionItem(
 
 我们也可以使用 [`list_collections`]来检索集合，并通过一些参数进行过滤。让我们列出用户[`teknium`](https://huggingface.co/teknium)的所有集合：
 ```py
->>> from huggingface_hub import list_collections
+>>> from huggingface_hub_4573 import list_collections
 
 >>> collections = list_collections(owner="teknium")
 ```
@@ -103,7 +103,7 @@ Crataco/favorite-7b-models-651944072b4fffcb41f8b568
 现在我们已经知道如何获取一个 [`Collection`], 让我们自己创建一个吧！ 使用 [`create_collection`]，传入一个标题和描述即可。 若要在组织（organization）名下创建集合，可以通过 `namespace="my-cool-org"` 参数指定。同样，你也可以通过传入 `private=True` 创建私有集合。
 
 ```py
->>> from huggingface_hub import create_collection
+>>> from huggingface_hub_4573 import create_collection
 
 >>> collection = create_collection(
 ...     title="ICCV 2023",
@@ -133,7 +133,7 @@ Crataco/favorite-7b-models-651944072b4fffcb41f8b568
 使用 [`add_collection_item`] 来向集合中添加条目（一次添加一个）。你只需要提供 `collection_slug`、`item_id` 和 `item_type`。可选参数 `note` 用于为该条目添加附加说明（最多 500 个字符）。
 
 ```py
->>> from huggingface_hub import create_collection, add_collection_item
+>>> from huggingface_hub_4573 import create_collection, add_collection_item
 
 >>> collection = create_collection(title="OS Week Highlights - Sept 18 - 24", namespace="osanseviero")
 >>> collection.slug
@@ -157,7 +157,7 @@ Crataco/favorite-7b-models-651944072b4fffcb41f8b568
 你可以使用 [`update_collection_item`] 来为已存在条目添加或修改备注。让我们重用上面的示例：
 
 ```py
->>> from huggingface_hub import get_collection, update_collection_item
+>>> from huggingface_hub_4573 import get_collection, update_collection_item
 
 # Fetch collection with newly added items
 >>> collection_slug = "osanseviero/os-week-highlights-sept-18-24-650bfed7f795a59f491afb80"
@@ -178,7 +178,7 @@ Crataco/favorite-7b-models-651944072b4fffcb41f8b568
 再次使用之前的示例：
 
 ```py
->>> from huggingface_hub import get_collection, update_collection_item
+>>> from huggingface_hub_4573 import get_collection, update_collection_item
 
 # Fetch collection
 >>> collection_slug = "osanseviero/os-week-highlights-sept-18-24-650bfed7f795a59f491afb80"
@@ -197,7 +197,7 @@ Crataco/favorite-7b-models-651944072b4fffcb41f8b568
 最后，你也可以使用 [`delete_collection_item`] 来删除集合中的条目。
 
 ```py
->>> from huggingface_hub import get_collection, update_collection_item
+>>> from huggingface_hub_4573 import get_collection, update_collection_item
 
 # Fetch collection
 >>> collection_slug = "osanseviero/os-week-highlights-sept-18-24-650bfed7f795a59f491afb80"
@@ -215,6 +215,6 @@ Crataco/favorite-7b-models-651944072b4fffcb41f8b568
 > 此操作不可逆。删除的集合无法恢复。
 
 ```py
->>> from huggingface_hub import delete_collection
+>>> from huggingface_hub_4573 import delete_collection
 >>> collection = delete_collection("username/useless-collection-64f9a55bb3115b4f513ec026", missing_ok=True)
 ```

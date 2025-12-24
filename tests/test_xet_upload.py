@@ -19,15 +19,15 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from huggingface_hub import HfApi, RepoUrl
-from huggingface_hub._commit_api import CommitOperationAdd, _upload_files, _upload_lfs_files, _upload_xet_files
-from huggingface_hub.file_download import (
+from huggingface_hub_4573 import HfApi, RepoUrl
+from huggingface_hub_4573._commit_api import CommitOperationAdd, _upload_files, _upload_lfs_files, _upload_xet_files
+from huggingface_hub_4573.file_download import (
     _get_metadata_or_catch_error,
     get_hf_file_metadata,
     hf_hub_download,
     hf_hub_url,
 )
-from huggingface_hub.utils import build_hf_headers, refresh_xet_connection_info
+from huggingface_hub_4573.utils import build_hf_headers, refresh_xet_connection_info
 
 from .testing_constants import ENDPOINT_STAGING, TOKEN
 from .testing_utils import repo_name, requires

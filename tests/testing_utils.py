@@ -15,7 +15,7 @@ from unittest.mock import Mock, patch
 import httpx
 import pytest
 
-from huggingface_hub.utils import is_package_available, logging
+from huggingface_hub_4573.utils import is_package_available, logging
 from tests.testing_constants import ENDPOINT_PRODUCTION, ENDPOINT_PRODUCTION_URL_SCHEME
 
 
@@ -437,7 +437,7 @@ def use_tmp_repo(repo_type: str = "model") -> Callable[[T], T]:
 
     Example:
     ```py
-    from huggingface_hub import RepoUrl
+    from huggingface_hub_4573 import RepoUrl
     from .testing_utils import use_tmp_repo
 
     class HfApiCommonTest(unittest.TestCase):

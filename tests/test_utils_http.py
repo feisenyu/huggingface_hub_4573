@@ -11,9 +11,9 @@ import httpx
 import pytest
 from httpx import ConnectTimeout, HTTPError
 
-from huggingface_hub.constants import ENDPOINT
-from huggingface_hub.errors import HfHubHTTPError, OfflineModeIsEnabled
-from huggingface_hub.utils._http import (
+from huggingface_hub_4573.constants import ENDPOINT
+from huggingface_hub_4573.errors import HfHubHTTPError, OfflineModeIsEnabled
+from huggingface_hub_4573.utils._http import (
     _WARNED_TOPICS,
     RateLimitInfo,
     _adjust_range_header,

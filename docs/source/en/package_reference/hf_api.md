@@ -14,7 +14,7 @@ from `hf auth login` or [`login`] as the token is not persisted on the machine.
 It is also possible to provide a different endpoint or configure a custom user-agent.
 
 ```python
-from huggingface_hub import HfApi, list_models
+from huggingface_hub_4573 import HfApi, list_models
 
 # Use root method
 models = list_models()

@@ -33,7 +33,7 @@ Par exemple, pour télécharger le fichier de configuration du
 modèle [Pegasus](https://huggingface.co/google/pegasus-xsum):
 
 ```py
->>> from huggingface_hub import hf_hub_download
+>>> from huggingface_hub_4573 import hf_hub_download
 >>> hf_hub_download(repo_id="google/pegasus-xsum", filename="config.json")
 ```
 
@@ -42,7 +42,7 @@ de spécifier le nom de la branche, le tag ou le hash de commit. Si vous décide
 le hash de commit, vous devez renseigner le hash entier et pas le hash court de 7 caractères:
 
 ```py
->>> from huggingface_hub import hf_hub_download
+>>> from huggingface_hub_4573 import hf_hub_download
 >>> hf_hub_download(
 ...     repo_id="google/pegasus-xsum", 
 ...     filename="config.json", 
@@ -75,7 +75,7 @@ Sinon, vous pouvez vous connecter en utilisant [`login`] dans un notebook ou
 un script:
 
 ```py
->>> from huggingface_hub import login
+>>> from huggingface_hub_4573 import login
 >>> login()
 ```
 
@@ -101,7 +101,7 @@ Une fois que vous avez créé votre compte et que vous vous êtes connectés,
 vous pouvez créer un dépôt avec la fonction [`create_repo`]:
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.create_repo(repo_id="super-cool-model")
 ```
@@ -109,7 +109,7 @@ vous pouvez créer un dépôt avec la fonction [`create_repo`]:
 Si vous voulez que votre dépôt soit privé, alors:
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.create_repo(repo_id="super-cool-model", private=True)
 ```
@@ -131,7 +131,7 @@ Vous devez spécifier:
 3. L'id du dépôt dans lequel vous voulez ajouter le fichier.
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.upload_file(
 ...     path_or_fileobj="/home/lysandre/dummy-test/README.md",

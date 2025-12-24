@@ -24,7 +24,7 @@ Strict dataclasses are created using the `@strict` decorator. They extend the fu
 
 ```python
 from dataclasses import dataclass
-from huggingface_hub.dataclasses import strict, as_validated_field
+from huggingface_hub_4573.dataclasses import strict, as_validated_field
 
 # Custom validator to ensure a value is positive
 @as_validated_field
@@ -78,7 +78,7 @@ You can attach multiple custom validators to fields using [`validated_field`]. A
 
 ```python
 from dataclasses import dataclass
-from huggingface_hub.dataclasses import strict, validated_field
+from huggingface_hub_4573.dataclasses import strict, validated_field
 
 def multiple_of_64(value: int):
     if value % 64 != 0:
@@ -98,7 +98,7 @@ By default, strict dataclasses only accept fields defined in the class. You can 
 
 ```python
 from dataclasses import dataclass
-from huggingface_hub.dataclasses import strict
+from huggingface_hub_4573.dataclasses import strict
 
 @strict(accept_kwargs=True)
 @dataclass
@@ -119,7 +119,7 @@ Strict dataclasses respect type hints and validate them automatically. For examp
 ```python
 from typing import List
 from dataclasses import dataclass
-from huggingface_hub.dataclasses import strict
+from huggingface_hub_4573.dataclasses import strict
 
 @strict
 @dataclass
@@ -150,7 +150,7 @@ Note that class validators are not automatically re-run when a field is updated 
 
 ```py
 from dataclasses import dataclass
-from huggingface_hub.dataclasses import strict
+from huggingface_hub_4573.dataclasses import strict
 
 @strict
 @dataclass

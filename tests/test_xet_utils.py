@@ -3,8 +3,8 @@ from unittest.mock import MagicMock
 import pytest
 from _pytest.monkeypatch import MonkeyPatch
 
-from huggingface_hub import constants
-from huggingface_hub.utils._xet import (
+from huggingface_hub_4573 import constants
+from huggingface_hub_4573.utils._xet import (
     XetFileData,
     _fetch_xet_connection_info_with_url,
     parse_xet_connection_info_from_headers,
@@ -285,7 +285,7 @@ def test_fetch_xet_metadata_with_url_invalid_response(mocker) -> None:
 
 def test_env_var_hf_hub_disable_xet() -> None:
     """Test that setting HF_HUB_DISABLE_XET results in is_xet_available() returning False."""
-    from huggingface_hub.utils._runtime import is_xet_available
+    from huggingface_hub_4573.utils._runtime import is_xet_available
 
     monkeypatch = MonkeyPatch()
     monkeypatch.setattr("huggingface_hub.constants.HF_HUB_DISABLE_XET", True)

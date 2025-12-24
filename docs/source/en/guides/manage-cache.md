@@ -117,7 +117,7 @@ helper. It will either return the filepath (if exists and cached), the object `_
 is cached) or `None` (if we don't know).
 
 ```python
-from huggingface_hub import try_to_load_from_cache, _CACHED_NO_EXIST
+from huggingface_hub_4573 import try_to_load_from_cache, _CACHED_NO_EXIST
 
 filepath = try_to_load_from_cache()
 if isinstance(filepath, str):
@@ -311,7 +311,7 @@ stays in the right assets folder. Those libraries can then leverage tools from
 assets from a CLI command.
 
 ```py
-from huggingface_hub import cached_assets_path
+from huggingface_hub_4573 import cached_assets_path
 
 assets_path = cached_assets_path(library_name="datasets", namespace="SQuAD", subfolder="download")
 something_path = assets_path / "something.json" # Do anything you like in your assets folder !
@@ -430,7 +430,7 @@ You can use it to get a detailed report structured around 4 dataclasses:
 Here is a simple usage example. See reference for details.
 
 ```py
->>> from huggingface_hub import scan_cache_dir
+>>> from huggingface_hub_4573 import scan_cache_dir
 
 >>> hf_cache_info = scan_cache_dir()
 HFCacheInfo(
@@ -598,7 +598,7 @@ For more flexibility, you can also use the [`~HFCacheInfo.delete_revisions`] met
 programmatically. Here is a simple example. See reference for details.
 
 ```py
->>> from huggingface_hub import scan_cache_dir
+>>> from huggingface_hub_4573 import scan_cache_dir
 
 >>> delete_strategy = scan_cache_dir().delete_revisions(
 ...     "81fd1d6e7847c99f5862c9fb81387956d99ec7aa"

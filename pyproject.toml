@@ -65,7 +65,7 @@ lint.ignore = ["E501"]
 lint.select = ["E", "F", "I", "W"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["huggingface_hub"]
+known-first-party = ["huggingface_hub_4573"]
 lines-after-imports = 2
 
 [tool.tomlsort]

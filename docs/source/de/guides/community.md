@@ -11,7 +11,7 @@ Die `huggingface_hub`-Bibliothek bietet eine Python-Schnittstelle, um mit Pull-R
 Die Klasse `HfApi` ermöglicht es Ihnen, Diskussionen und Pull-Requests zu einem gegebenen Repository abzurufen:
 
 ```python
->>> from huggingface_hub import get_repo_discussions
+>>> from huggingface_hub_4573 import get_repo_discussions
 >>> for discussion in get_repo_discussions(repo_id="bigscience/bloom-1b3"):
 ...     print(f"{discussion.num} - {discussion.title}, pr: {discussion.is_pull_request}")
 
@@ -26,14 +26,14 @@ Die Klasse `HfApi` ermöglicht es Ihnen, Diskussionen und Pull-Requests zu einem
 `HfApi.get_repo_discussions` gibt einen [Generator](https://docs.python.org/3.7/howto/functional.html#generators) zurück, der [`Diskussion`]-Objekte liefert. Um alle Diskussionen in einer einzelnen Liste zu erhalten, führen Sie den folgenden Befehl aus:
 
 ```python
->>> from huggingface_hub import get_repo_discussions
+>>> from huggingface_hub_4573 import get_repo_discussions
 >>> discussions_list = list(get_repo_discussions(repo_id="bert-base-uncased"))
 ```
 
 Das von [`HfApi.get_repo_discussions`] zurückgegebene [`Diskussion`]-Objekt enthält einen Überblick über die Diskussion oder Pull-Requests. Sie können auch detailliertere Informationen mit [`HfApi.get_discussion_details`] abrufen:
 
 ```python
->>> from huggingface_hub import get_discussion_details
+>>> from huggingface_hub_4573 import get_discussion_details
 
 >>> get_discussion_details(
 ...     repo_id="bigscience/bloom-1b3",
@@ -74,7 +74,7 @@ Die einfachste Möglichkeit, Änderungen an einem Repo auf dem Hub vorzuschlagen
     * [`metadata_update`]
 
 ```python
->>> from huggingface_hub import metadata_update
+>>> from huggingface_hub_4573 import metadata_update
 
 >>> metadata_update(
 ...     repo_id="username/repo_name",
@@ -86,7 +86,7 @@ Die einfachste Möglichkeit, Änderungen an einem Repo auf dem Hub vorzuschlagen
 Sie können auch [`HfApi.create_discussion`] (bzw. [`HfApi.create_pull_request`]) verwenden, um eine Diskussion (bzw. einen Pull-Request) für ein Repository zu erstellen. Das Öffnen eines Pull-Requests auf diese Weise kann nützlich sein, wenn Sie lokal an Änderungen arbeiten müssen. Auf diese Weise geöffnete Pull-Requests befinden sich im `"Entwurfs"`-Modus.
 
 ```python
->>> from huggingface_hub import create_discussion, create_pull_request
+>>> from huggingface_hub_4573 import create_discussion, create_pull_request
 
 >>> create_discussion(
 ...     repo_id="username/repo-name",

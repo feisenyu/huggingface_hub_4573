@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Callable, Optional, Union
 
-from huggingface_hub.utils import DEFAULT_IGNORE_PATTERNS, filter_repo_objects
+from huggingface_hub_4573.utils import DEFAULT_IGNORE_PATTERNS, filter_repo_objects
 
 
 @dataclass

@@ -5,7 +5,7 @@ from pathlib import Path
 import filelock
 import pytest
 
-from huggingface_hub.utils import SoftTemporaryDirectory, WeakFileLock, yaml_dump
+from huggingface_hub_4573.utils import SoftTemporaryDirectory, WeakFileLock, yaml_dump
 
 
 class TestYamlDump(unittest.TestCase):

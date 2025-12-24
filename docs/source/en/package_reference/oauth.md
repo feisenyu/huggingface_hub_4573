@@ -29,7 +29,7 @@ The `attach_huggingface_oauth` function adds login, logout, and callback endpoin
 ### How to use it?
 
 ```python
-from huggingface_hub import attach_huggingface_oauth, parse_huggingface_oauth
+from huggingface_hub_4573 import attach_huggingface_oauth, parse_huggingface_oauth
 from fastapi import FastAPI, Request
 
 app = FastAPI()

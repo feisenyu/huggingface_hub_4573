@@ -19,7 +19,7 @@ rendered properly in your Markdown viewer.
 text-to-image 작업을 시작해보겠습니다.
 
 ```python
->>> from huggingface_hub import InferenceClient
+>>> from huggingface_hub_4573 import InferenceClient
 >>> client = InferenceClient()
 
 >>> image = client.text_to_image("An astronaut riding a horse on the moon.")
@@ -36,7 +36,7 @@ text-to-image 작업을 시작해보겠습니다.
 특정 모델을 사용하고 싶다면 어떻게 해야 할까요? 매개변수로 직접 지정하거나 인스턴스 수준에서 직접 지정할 수 있습니다:
 
 ```python
->>> from huggingface_hub import InferenceClient
+>>> from huggingface_hub_4573 import InferenceClient
 # 특정 모델을 위한 클라이언트를 초기화합니다.
 >>> client = InferenceClient(model="prompthero/openjourney-v4")
 >>> client.text_to_image(...)
@@ -53,7 +53,7 @@ text-to-image 작업을 시작해보겠습니다.
 위에서 본 예제들은 서버리스 추론 API를 사용합니다. 이는 빠르게 프로토타입을 정하고 테스트할 때 매우 유용합니다. 모델을 프로덕션 환경에 배포할 준비가 되면 전용 인프라를 사용해야 합니다. 그것이 [추론 엔드포인트](https://huggingface.co/docs/inference-endpoints/index)가 필요한 이유입니다. 이를 사용하면 모든 모델을 배포하고 개인 API로 노출시킬 수 있습니다. 한 번 배포되면 이전과 완전히 동일한 코드를 사용하여 연결할 수 있는 URL을 얻게 됩니다. `model` 매개변수만 변경하면 됩니다:
 
 ```python
->>> from huggingface_hub import InferenceClient
+>>> from huggingface_hub_4573 import InferenceClient
 >>> client = InferenceClient(model="https://uu149rez6gw9ehej.eu-west-1.aws.endpoints.huggingface.cloud/deepfloyd-if")
 # 또는
 >>> client = InferenceClient()
@@ -65,7 +65,7 @@ text-to-image 작업을 시작해보겠습니다.
 [`InferenceClient`]로 수행된 호출은 [사용자 액세스 토큰](https://huggingface.co/docs/hub/security-tokens)을 사용하여 인증할 수 있습니다. 기본적으로 로그인한 경우 기기에 저장된 토큰을 사용합니다 ([인증 방법](https://huggingface.co/docs/huggingface_hub/quick-start#authentication)을 확인하세요). 로그인하지 않은 경우 인스턴스 매개변수로 토큰을 전달할 수 있습니다.
 
 ```python
->>> from huggingface_hub import InferenceClient
+>>> from huggingface_hub_4573 import InferenceClient
 >>> client = InferenceClient(token="hf_***")
 ```
 
@@ -126,7 +126,7 @@ pip install --upgrade huggingface_hub[inference]
 ```py
 # 코드는 비동기 asyncio 라이브러리 동시성 컨텍스트에서 실행되어야 합니다.
 # $ python -m asyncio
->>> from huggingface_hub import AsyncInferenceClient
+>>> from huggingface_hub_4573 import AsyncInferenceClient
 >>> client = AsyncInferenceClient()
 
 >>> image = await client.text_to_image("An astronaut riding a horse on the moon.")
@@ -152,7 +152,7 @@ pip install --upgrade huggingface_hub[inference]
 [`InferenceClient`]에는 이 두 가지를 처리하기 위한 전역 `timeout` 매개변수가 있습니다. 기본값은 `None`으로 설정되어 있으며, 클라이언트가 추론이 완료될 때까지 무기한으로 기다리게 합니다. 워크플로우에서 더 많은 제어를 원하는 경우 초 단위의 특정한 값으로 설정할 수 있습니다. 타임아웃 딜레이가 만료되면 [`InferenceTimeoutError`]가 발생합니다. 이를 코드에서 처리할 수 있습니다:
 
 ```python
->>> from huggingface_hub import InferenceClient, InferenceTimeoutError
+>>> from huggingface_hub_4573 import InferenceClient, InferenceTimeoutError
 >>> client = InferenceClient(timeout=30)
 >>> try:
 ...     client.text_to_image(...)
@@ -169,7 +169,7 @@ pip install --upgrade huggingface_hub[inference]
 - 원격 파일을 가리키는 URL (`str`) (예: `https://...`). 이 경우 파일은 Inference API로 전송되기 전에 로컬로 다운로드됩니다.
 
 ```py
->>> from huggingface_hub import InferenceClient
+>>> from huggingface_hub_4573 import InferenceClient
 >>> client = InferenceClient()
 >>> client.image_classification("https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Cute_dog.jpg/320px-Cute_dog.jpg")
 [{'score': 0.9779096841812134, 'label': 'Blenheim spaniel'}, ...]

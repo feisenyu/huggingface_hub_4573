@@ -4,7 +4,7 @@ from unittest.mock import MagicMock, Mock, patch
 
 import pytest
 
-from huggingface_hub import (
+from huggingface_hub_4573 import (
     AsyncInferenceClient,
     HfApi,
     InferenceClient,

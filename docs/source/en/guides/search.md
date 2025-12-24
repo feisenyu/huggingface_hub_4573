@@ -12,7 +12,7 @@ In this tutorial, you will learn how to search models, datasets and spaces on th
 Among other things, it can list models, datasets and spaces stored on the Hub:
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> models = api.list_models()
 ```

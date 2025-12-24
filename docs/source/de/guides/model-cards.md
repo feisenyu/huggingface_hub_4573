@@ -14,7 +14,7 @@ Die `huggingface_hub`-Bibliothek bietet eine Python-Schnittstelle zum Erstellen,
 Um eine bestehende Karte vom Hub zu laden, können Sie die Funktion [`ModelCard.load`] verwenden. Hier laden wir die Karte von [`nateraw/vit-base-beans`](https://huggingface.co/nateraw/vit-base-beans).
 
 ```python
-from huggingface_hub import ModelCard
+from huggingface_hub_4573 import ModelCard
 
 card = ModelCard.load('nateraw/vit-base-beans')
 ```
@@ -89,7 +89,7 @@ Wenn Sie `Jinja2` installiert haben, können Sie Model Cards aus einer Jinja-Vor
 ```python
 from pathlib import Path
 
-from huggingface_hub import ModelCard, ModelCardData
+from huggingface_hub_4573 import ModelCard, ModelCardData
 
 # Definieren Sie Ihre Jinja-Vorlage
 template_text = """
@@ -187,7 +187,7 @@ Wenn Sie mit dem Hugging Face Hub authentifiziert sind (entweder durch Verwendun
 Zuerst erstellen wir ein neues Repo namens 'hf-hub-modelcards-pr-test' im Namensraum des authentifizierten Benutzers:
 
 ```python
-from huggingface_hub import whoami, create_repo
+from huggingface_hub_4573 import whoami, create_repo
 
 user = whoami()['name']
 repo_id = f'{user}/hf-hub-modelcards-pr-test'

@@ -10,13 +10,13 @@ rendered properly in your Markdown viewer.
 다음과 같이 가져올 수 있습니다:
 
 ```py
-from huggingface_hub import logging
+from huggingface_hub_4573 import logging
 ```
 
 그런 다음, 로그의 출력 수를 업데이트하기 위해 로그 레벨을 정의할 수 있습니다:
 
 ```python
-from huggingface_hub import logging
+from huggingface_hub_4573 import logging
 
 logging.set_verbosity_error()
 logging.set_verbosity_warning()
@@ -56,8 +56,8 @@ logging.set_verbosity(...)
 
 
 ```py
->>> from huggingface_hub import snapshot_download
->>> from huggingface_hub.utils import are_progress_bars_disabled, disable_progress_bars, enable_progress_bars
+>>> from huggingface_hub_4573 import snapshot_download
+>>> from huggingface_hub_4573.utils import are_progress_bars_disabled, disable_progress_bars, enable_progress_bars
 
 >>> # 전역적으로 프로그레스 바를 비활성화합니다.
 >>> disable_progress_bars()
@@ -95,7 +95,7 @@ True
 
 ```py
 import requests
-from huggingface_hub.utils import hf_raise_for_status, HfHubHTTPError
+from huggingface_hub_4573.utils import hf_raise_for_status, HfHubHTTPError
 
 response = requests.post(...)
 try:
@@ -175,7 +175,7 @@ except HfHubHTTPError as e:
 사용법:
 
 ```py
->>> from huggingface_hub.utils import validate_hf_hub_args
+>>> from huggingface_hub_4573.utils import validate_hf_hub_args
 
 >>> @validate_hf_hub_args
 ... def my_cool_method(repo_id: str):

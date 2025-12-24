@@ -3,8 +3,8 @@ import subprocess
 from hashlib import sha256
 from io import BytesIO
 
-from huggingface_hub.utils import SoftTemporaryDirectory
-from huggingface_hub.utils.sha import git_hash, sha_fileobj
+from huggingface_hub_4573.utils import SoftTemporaryDirectory
+from huggingface_hub_4573.utils.sha import git_hash, sha_fileobj
 
 
 def test_sha_fileobj():

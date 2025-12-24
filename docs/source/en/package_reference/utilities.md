@@ -10,13 +10,13 @@ The `huggingface_hub` package exposes a `logging` utility to control the logging
 You can import it as such:
 
 ```py
-from huggingface_hub import logging
+from huggingface_hub_4573 import logging
 ```
 
 Then, you may define the verbosity in order to update the amount of logs you'll see:
 
 ```python
-from huggingface_hub import logging
+from huggingface_hub_4573 import logging
 
 logging.set_verbosity_error()
 logging.set_verbosity_warning()
@@ -64,8 +64,8 @@ environment variable. You can also enable/disable them using [`~utils.enable_pro
 [`~utils.disable_progress_bars`]. If set, the environment variable has priority on the helpers.
 
 ```py
->>> from huggingface_hub import snapshot_download
->>> from huggingface_hub.utils import are_progress_bars_disabled, disable_progress_bars, enable_progress_bars
+>>> from huggingface_hub_4573 import snapshot_download
+>>> from huggingface_hub_4573.utils import are_progress_bars_disabled, disable_progress_bars, enable_progress_bars
 
 >>> # Disable progress bars globally
 >>> disable_progress_bars()
@@ -168,7 +168,7 @@ additional information. Any `HTTPError` thrown is converted into a `HfHubHTTPErr
 
 ```py
 import requests
-from huggingface_hub.utils import hf_raise_for_status, HfHubHTTPError
+from huggingface_hub_4573.utils import hf_raise_for_status, HfHubHTTPError
 
 response = requests.post(...)
 try:
@@ -264,7 +264,7 @@ the first non-valid value throws an error and stops the validation process.
 Usage:
 
 ```py
->>> from huggingface_hub.utils import validate_hf_hub_args
+>>> from huggingface_hub_4573.utils import validate_hf_hub_args
 
 >>> @validate_hf_hub_args
 ... def my_cool_method(repo_id: str):

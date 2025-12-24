@@ -9,7 +9,7 @@ Zusätzlich zur [`HfApi`] bietet die `huggingface_hub` Bibliothek [`HfFileSystem
 ## Verwendung
 
 ```python
->>> from huggingface_hub import hffs
+>>> from huggingface_hub_4573 import hffs
 
 >>> # Alle Dateien in einem Verzeichnis auflisten
 >>> hffs.ls("datasets/my-username/my-dataset-repo/data", detail=False)
@@ -65,7 +65,7 @@ Einige interessante Integrationen, bei denen [`HfFileSystem`] die Interaktion mi
 * Abfrage von (entfernten) Hub-Dateien mit  [DuckDB](https://duckdb.org/docs/guides/python/filesystems):
 
   ```python
-  >>> from huggingface_hub import HfFileSystem
+  >>> from huggingface_hub_4573 import HfFileSystem
   >>> import duckdb
 
   >>> fs = HfFileSystem()
@@ -102,7 +102,7 @@ Es ist auch möglich, sich programmatisch anzumelden, indem Sie Ihr `token` als 
 
 
 ```python
->>> from huggingface_hub import HfFileSystem
+>>> from huggingface_hub_4573 import HfFileSystem
 >>> hffs = HfFileSystem(token=token)
 ```
 

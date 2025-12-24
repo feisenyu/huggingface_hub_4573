@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 
 
 def get_version() -> str:
-    rel_path = "src/huggingface_hub/__init__.py"
+    rel_path = "src/huggingface_hub_4573/__init__.py"
     with open(rel_path, "r") as fp:
         for line in fp.read().splitlines():
             if line.startswith("__version__"):
@@ -101,7 +101,7 @@ extras["all"] = extras["testing"] + extras["quality"] + extras["typing"]
 extras["dev"] = extras["all"]
 
 setup(
-    name="huggingface_hub",
+    name="huggingface_hub_4573",
     version=get_version(),
     author="Hugging Face, Inc.",
     author_email="julien@huggingface.co",
@@ -116,10 +116,10 @@ setup(
     extras_require=extras,
     entry_points={
         "console_scripts": [
-            "hf=huggingface_hub.cli.hf:main",
-            "tiny-agents=huggingface_hub.inference._mcp.cli:app",
+            "hf=huggingface_hub_4573.cli.hf:main",
+            "tiny-agents=huggingface_hub_4573.inference._mcp.cli:app",
         ],
-        "fsspec.specs": "hf=huggingface_hub.HfFileSystem",
+        "fsspec.specs": "hf=huggingface_hub_4573.HfFileSystem",
     },
     python_requires=">=3.9.0",
     install_requires=install_requires,
@@ -140,5 +140,5 @@ setup(
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
     ],
     include_package_data=True,
-    package_data={"huggingface_hub": ["py.typed"]},  # Needed for wheel installation
+    package_data={"huggingface_hub_4573": ["py.typed"]},  # Needed for wheel installation
 )

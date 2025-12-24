@@ -22,7 +22,7 @@ rendered properly in your Markdown viewer.
 다운로드할 파일을 선택하기 위해 `repo_id`, `repo_type`, `filename` 매개변수를 사용합니다. `repo_type` 매개변수를 생략하면 파일은 `model` 리포의 일부라고 간주됩니다.
 
 ```python
->>> from huggingface_hub import hf_hub_download
+>>> from huggingface_hub_4573 import hf_hub_download
 >>> hf_hub_download(repo_id="lysandre/arxiv-nlp", filename="config.json")
 '/root/.cache/huggingface/hub/models--lysandre--arxiv-nlp/snapshots/894a9adde21d9a3e3843e6d5aeaaf01875c7fade/config.json'
 
@@ -62,7 +62,7 @@ rendered properly in your Markdown viewer.
 전체 리포지토리를 다운로드하려면 `repo_id`와 `repo_type`을 인자로 넘겨주면 됩니다:
 
 ```python
->>> from huggingface_hub import snapshot_download
+>>> from huggingface_hub_4573 import snapshot_download
 >>> snapshot_download(repo_id="lysandre/arxiv-nlp")
 '/home/lysandre/.cache/huggingface/hub/models--lysandre--arxiv-nlp/snapshots/894a9adde21d9a3e3843e6d5aeaaf01875c7fade'
 
@@ -74,7 +74,7 @@ rendered properly in your Markdown viewer.
 [`snapshot_download`] 함수는 기본적으로 최신 버전의 리포지토리를 다운로드합니다. 특정 버전의 리포지토리를 다운로드하고 싶은 경우, `revision` 매개변수에 원하는 버전을 지정하면 됩니다:
 
 ```python
->>> from huggingface_hub import snapshot_download
+>>> from huggingface_hub_4573 import snapshot_download
 >>> snapshot_download(repo_id="lysandre/arxiv-nlp", revision="refs/pr/1")
 ```
 
@@ -87,21 +87,21 @@ rendered properly in your Markdown viewer.
 예를 들어, `allow_patterns`를 사용하여 JSON 구성 파일만 다운로드하는 방법은 다음과 같습니다:
 
 ```python
->>> from huggingface_hub import snapshot_download
+>>> from huggingface_hub_4573 import snapshot_download
 >>> snapshot_download(repo_id="lysandre/arxiv-nlp", allow_patterns="*.json")
 ```
 
 반대로 `ignore_patterns`는 특정 파일을 다운로드에서 제외시킬 수 있습니다. 다음 예제는 `.msgpack`과 `.h5` 파일 확장자를 무시하는 방법입니다:
 
 ```python
->>> from huggingface_hub import snapshot_download
+>>> from huggingface_hub_4573 import snapshot_download
 >>> snapshot_download(repo_id="lysandre/arxiv-nlp", ignore_patterns=["*.msgpack", "*.h5"])
 ```
 
 마지막으로, 두 가지 매개변수를 함께 사용하여 다운로드를 정확하게 선택할 수 있습니다. 다음은 `vocab.json`을 제외한 모든 json 및 마크다운 파일을 다운로드하는 예제입니다.
 
 ```python
->>> from huggingface_hub import snapshot_download
+>>> from huggingface_hub_4573 import snapshot_download
 >>> snapshot_download(repo_id="gpt2", allow_patterns=["*.md", "*.json"], ignore_patterns="vocab.json")
 ```
 

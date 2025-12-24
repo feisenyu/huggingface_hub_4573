@@ -66,7 +66,7 @@ CLI가 제대로 설치되었다면 CLI에서 사용 가능한 모든 옵션 목
 전역 설치 없이 일회성으로 실행하려면 `uvx`를 사용하세요:
 
 ```bash
->>> uvx --from huggingface_hub hf --help
+>>> uvx --from huggingface_hub_4573 hf --help
 ```
 
 #### Homebrew 사용하기 [[using-homebrew]]

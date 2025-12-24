@@ -38,7 +38,7 @@ from typing import Callable, NoReturn
 
 from ruff.__main__ import find_ruff_bin
 
-from huggingface_hub.hf_api import HfApi
+from huggingface_hub_4573.hf_api import HfApi
 
 
 STUBS_SECTION_TEMPLATE = """

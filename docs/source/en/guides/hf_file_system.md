@@ -14,7 +14,7 @@ In addition to the [`HfApi`], the `huggingface_hub` library provides [`HfFileSys
 ## Usage
 
 ```python
->>> from huggingface_hub import hffs
+>>> from huggingface_hub_4573 import hffs
 
 >>> # List all files in a directory
 >>> hffs.ls("datasets/my-username/my-dataset-repo/data", detail=False)
@@ -74,7 +74,7 @@ The same workflow can also be used for [Dask](https://docs.dask.org/en/stable/ho
 * Querying (remote) Hub files with [DuckDB](https://duckdb.org/docs/guides/python/filesystems):
 
   ```python
-  >>> from huggingface_hub import HfFileSystem
+  >>> from huggingface_hub_4573 import HfFileSystem
   >>> import duckdb
 
   >>> fs = HfFileSystem()
@@ -110,7 +110,7 @@ In many cases, you must be logged in with a Hugging Face account to interact wit
 It is also possible to log in programmatically by passing your `token` as an argument to [`HfFileSystem`]:
 
 ```python
->>> from huggingface_hub import HfFileSystem
+>>> from huggingface_hub_4573 import HfFileSystem
 >>> hffs = HfFileSystem(token=token)
 ```
 

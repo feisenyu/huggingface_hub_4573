@@ -103,7 +103,7 @@ conda install -c conda-forge huggingface_hub
 நிறுவலுக்குப் பிறகு, `huggingface_hub` சரியாக வேலை செய்கிறதா என்பதைக் கீழ்காணும் கட்டளையை இயக்கி சோதிக்கவும்:
 
 ```bash
-python -c "from huggingface_hub import model_info; print(model_info('gpt2'))"
+python -c "from huggingface_hub_4573 import model_info; print(model_info('gpt2'))"
 ```
 
 இந்த கட்டளை, Hub-இல் உள்ள [gpt2](https://huggingface.co/gpt2) மாடலுக்கான தகவல்களை பெறும். வெளியீடு கீழ்காணும் மாதிரியாக இருக்க வேண்டும்:

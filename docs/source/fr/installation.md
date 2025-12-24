@@ -119,7 +119,7 @@ Une fois l'installation terminée, rendez-vous à la section [vérification](#ve
 Une fois installée, vérifiez que `huggingface_hub` marche correctement en lançant la commande suivante:
 
 ```bash
-python -c "from huggingface_hub import model_info; print(model_info('gpt2'))"
+python -c "from huggingface_hub_4573 import model_info; print(model_info('gpt2'))"
 ```
 
 Cette commande va récupérer des informations sur le modèle [gpt2](https://huggingface.co/gpt2) depuis le Hub.

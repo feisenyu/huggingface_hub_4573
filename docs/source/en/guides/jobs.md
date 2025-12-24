@@ -52,7 +52,7 @@ This feature is pay-as-you-go: you only pay for the seconds you use.
 
 ```python
 # Directly run Python code
->>> from huggingface_hub import run_job
+>>> from huggingface_hub_4573 import run_job
 >>> run_job(
 ...     image="python:3.12",
 ...     command=["python", "-c", "print('Hello from the cloud!')"],
@@ -79,7 +79,7 @@ This feature is pay-as-you-go: you only pay for the seconds you use.
 ... )
 
 # Run a Python script with `uv` (experimental)
->>> from huggingface_hub import run_uv_job
+>>> from huggingface_hub_4573 import run_uv_job
 >>> run_uv_job("my_script.py")
 ```
 
@@ -90,7 +90,7 @@ This feature is pay-as-you-go: you only pay for the seconds you use.
 Save the Job ID from [`JobInfo`] to manage the job:
 
 ```python
->>> from huggingface_hub import run_job
+>>> from huggingface_hub_4573 import run_job
 >>> job = run_job(
 ...     image="python:3.12",
 ...     command=["python", "-c", "print('Hello from the cloud!')"]
@@ -107,7 +107,7 @@ Jobs run in the background. The next section guides you through [`inspect_job`] 
 
 ```python
 # List your jobs
->>> from huggingface_hub import list_jobs
+>>> from huggingface_hub_4573 import list_jobs
 >>> jobs = list_jobs()
 >>> jobs[0]
 JobInfo(id='687f911eaea852de79c4a50a', created_at=datetime.datetime(2025, 7, 22, 13, 24, 46, 909000, tzinfo=datetime.timezone.utc), docker_image='python:3.12', space_id=None, command=['python', '-c', "print('Hello from the cloud!')"], arguments=[], environment={}, secrets={}, flavor='cpu-basic', status=JobStatus(stage='COMPLETED', message=None), owner=JobOwner(id='5e9ecfc04957053f60648a3e', name='lhoestq'), endpoint='https://huggingface.co', url='https://huggingface.co/jobs/lhoestq/687f911eaea852de79c4a50a')
@@ -116,18 +116,18 @@ JobInfo(id='687f911eaea852de79c4a50a', created_at=datetime.datetime(2025, 7, 22,
 >>> running_jobs = [job for job in list_jobs() if job.status.stage == "RUNNING"]
 
 # Inspect the status of a job
->>> from huggingface_hub import inspect_job
+>>> from huggingface_hub_4573 import inspect_job
 >>> inspect_job(job_id=job_id)
 JobInfo(id='687f911eaea852de79c4a50a', created_at=datetime.datetime(2025, 7, 22, 13, 24, 46, 909000, tzinfo=datetime.timezone.utc), docker_image='python:3.12', space_id=None, command=['python', '-c', "print('Hello from the cloud!')"], arguments=[], environment={}, secrets={}, flavor='cpu-basic', status=JobStatus(stage='COMPLETED', message=None), owner=JobOwner(id='5e9ecfc04957053f60648a3e', name='lhoestq'), endpoint='https://huggingface.co', url='https://huggingface.co/jobs/lhoestq/687f911eaea852de79c4a50a')
 
 # View logs from a job
->>> from huggingface_hub import fetch_job_logs
+>>> from huggingface_hub_4573 import fetch_job_logs
 >>> for log in fetch_job_logs(job_id=job_id):
 ...     print(log)
 Hello from the cloud!
 
 # Cancel a job
->>> from huggingface_hub import cancel_job
+>>> from huggingface_hub_4573 import cancel_job
 >>> cancel_job(job_id=job_id)
 ```
 
@@ -136,7 +136,7 @@ Check the status of multiple jobs to know when they're all finished using a loop
 ```python
 # Run multiple jobs in parallel and wait for their completions
 >>> import time
->>> from huggingface_hub import inspect_job, run_job
+>>> from huggingface_hub_4573 import inspect_job, run_job
 >>> jobs = [run_job(image=image, command=command) for command in commands]
 >>> for job in jobs:
 ...     while inspect_job(job_id=job.id).status.stage not in ("COMPLETED", "ERROR"):
@@ -158,7 +158,7 @@ Run jobs on GPUs or TPUs with the `flavor` argument. For example, to run a PyTor
 
 ```python
 # Use an A10G GPU to check PyTorch CUDA
->>> from huggingface_hub import run_job
+>>> from huggingface_hub_4573 import run_job
 >>> run_job(
 ...     image="pytorch/pytorch:2.6.0-cuda12.4-cudnn9-devel",
 ...     command=["python", "-c", "import torch; print(f'This code ran with the following GPU: {torch.cuda.get_device_name()}')"],
@@ -175,7 +175,7 @@ This code ran with the following GPU: NVIDIA A10G
 Use this to run a fine-tuning script like [trl/scripts/sft.py](https://github.com/huggingface/trl/blob/main/trl/scripts/sft.py) with UV:
 
 ```python
->>> from huggingface_hub import run_uv_job
+>>> from huggingface_hub_4573 import run_uv_job
 >>> run_uv_job(
 ...     "sft.py",
 ...     script_args=["--model_name_or_path", "Qwen/Qwen2-0.5B", ...],
@@ -208,7 +208,7 @@ You can specify a custom timeout value using the `timeout` parameter when runnin
 
 1. **As a number** (interpreted as seconds):
 ```python
->>> from huggingface_hub import run_job
+>>> from huggingface_hub_4573 import run_job
 >>> job = run_job(
 ...     image="pytorch/pytorch:2.6.0-cuda12.4-cudnn9-devel",
 ...     command=["python", "train_model.py"],
@@ -245,7 +245,7 @@ Supported time units:
 For UV jobs, you can also specify the timeout:
 
 ```python
->>> from huggingface_hub import run_uv_job
+>>> from huggingface_hub_4573 import run_uv_job
 >>> job = run_uv_job(
 ...     "training_script.py",
 ...     flavor="a10g-large",
@@ -264,7 +264,7 @@ When running long tasks, it's good practice to:
 - Check the job status to ensure it hasn't timed out
 
 ```python
->>> from huggingface_hub import inspect_job, fetch_job_logs
+>>> from huggingface_hub_4573 import inspect_job, fetch_job_logs
 >>> # Check job status
 >>> job_info = inspect_job(job_id=job.id)
 >>> if job_info.status.stage == "ERROR":
@@ -282,7 +282,7 @@ You can pass environment variables to your job using `env` and `secrets`:
 
 ```python
 # Pass environment variables
->>> from huggingface_hub import run_job
+>>> from huggingface_hub_4573 import run_job
 >>> run_job(
 ...     image="python:3.12",
 ...     command=["python", "-c", "import os; print(os.environ['FOO'], os.environ['BAR'])"],
@@ -293,7 +293,7 @@ You can pass environment variables to your job using `env` and `secrets`:
 
 ```python
 # Pass secrets - they will be encrypted server side
->>> from huggingface_hub import run_job
+>>> from huggingface_hub_4573 import run_job
 >>> run_job(
 ...     image="python:3.12",
 ...     command=["python", "-c", "import os; print(os.environ['MY_SECRET'])"],
@@ -311,7 +311,7 @@ Run UV scripts (Python scripts with inline dependencies) on HF infrastructure:
 
 ```python
 # Run a UV script (creates temporary repo)
->>> from huggingface_hub import run_uv_job
+>>> from huggingface_hub_4573 import run_uv_job
 >>> run_uv_job("my_script.py")
 
 # Run with GPU
@@ -358,7 +358,7 @@ Use [`create_scheduled_job`] or [`create_scheduled_uv_job`] with a schedule of `
 
 ```python
 # Schedule a job that runs every hour
->>> from huggingface_hub import create_scheduled_job
+>>> from huggingface_hub_4573 import create_scheduled_job
 >>> create_scheduled_job(
 ...     image="python:3.12",
 ...     command=["python",  "-c", "print('This runs every hour!')"],
@@ -381,7 +381,7 @@ Use [`create_scheduled_job`] or [`create_scheduled_uv_job`] with a schedule of `
 ... )
 
 # Schedule a UV script
->>> from huggingface_hub import create_scheduled_uv_job
+>>> from huggingface_hub_4573 import create_scheduled_uv_job
 >>> create_scheduled_uv_job("my_script.py", schedule="@hourly")
 ```
 
@@ -391,23 +391,23 @@ Manage scheduled jobs using [`list_scheduled_jobs`], [`inspect_scheduled_job`], 
 
 ```python
 # List your active scheduled jobs
->>> from huggingface_hub import list_scheduled_jobs
+>>> from huggingface_hub_4573 import list_scheduled_jobs
 >>> list_scheduled_jobs()
 
 # Inspect the status of a job
->>> from huggingface_hub import inspect_scheduled_job
+>>> from huggingface_hub_4573 import inspect_scheduled_job
 >>> inspect_scheduled_job(scheduled_job_id)
 
 # Suspend (pause) a scheduled job
->>> from huggingface_hub import suspend_scheduled_job
+>>> from huggingface_hub_4573 import suspend_scheduled_job
 >>> suspend_scheduled_job(scheduled_job_id)
 
 # Resume a scheduled job
->>> from huggingface_hub import resume_scheduled_job
+>>> from huggingface_hub_4573 import resume_scheduled_job
 >>> resume_scheduled_job(scheduled_job_id)
 
 # Delete a scheduled job
->>> from huggingface_hub import delete_scheduled_job
+>>> from huggingface_hub_4573 import delete_scheduled_job
 >>> delete_scheduled_job(scheduled_job_id)
 ```
 
@@ -418,7 +418,7 @@ Webhooks allow you to listen for new changes on specific repos or to all repos b
 Use [`create_webhook`] to create a webhook that triggers a Job when a change happens in a Hugging Face repository:
 
 ```python
-from huggingface_hub import create_webhook
+from huggingface_hub_4573 import create_webhook
 
 # Example: Creating a webhook that triggers a Job
 webhook = create_webhook(

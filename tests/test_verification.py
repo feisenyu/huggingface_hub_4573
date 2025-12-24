@@ -6,15 +6,15 @@ from unittest.mock import patch
 import pytest
 
 import huggingface_hub.utils._verification as verification_module
-from huggingface_hub.hf_api import HfApi
-from huggingface_hub.utils._verification import (
+from huggingface_hub_4573.hf_api import HfApi
+from huggingface_hub_4573.utils._verification import (
     HashAlgo,
     collect_local_files,
     compute_file_hash,
     resolve_local_root,
     verify_maps,
 )
-from huggingface_hub.utils.sha import git_hash
+from huggingface_hub_4573.utils.sha import git_hash
 
 
 def _write(p: Path, data: bytes) -> None:

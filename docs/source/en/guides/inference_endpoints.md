@@ -17,7 +17,7 @@ This guide assumes `huggingface_hub` is correctly installed and that your machin
 The first step is to create an Inference Endpoint using [`create_inference_endpoint`]:
 
 ```py
->>> from huggingface_hub import create_inference_endpoint
+>>> from huggingface_hub_4573 import create_inference_endpoint
 
 >>> endpoint = create_inference_endpoint(
 ...     "my-endpoint-name",
@@ -70,7 +70,7 @@ By default the Inference Endpoint is built from a docker image provided by Huggi
 
 ```python
 # Start an Inference Endpoint running Zephyr-7b-beta on TGI
->>> from huggingface_hub import create_inference_endpoint
+>>> from huggingface_hub_4573 import create_inference_endpoint
 >>> endpoint = create_inference_endpoint(
 ...     "aws-zephyr-7b-beta-0486",
 ...     repository="HuggingFaceH4/zephyr-7b-beta",
@@ -102,7 +102,7 @@ The value to pass as `custom_image` is a dictionary containing a url to the dock
 In some cases, you might need to manage Inference Endpoints you created previously. If you know the name, you can fetch it using [`get_inference_endpoint`], which returns an [`InferenceEndpoint`] object. Alternatively, you can use [`list_inference_endpoints`] to retrieve a list of all Inference Endpoints. Both methods accept an optional `namespace` parameter. You can set the `namespace` to any organization you are a part of. Otherwise, it defaults to your username.
 
 ```py
->>> from huggingface_hub import get_inference_endpoint, list_inference_endpoints
+>>> from huggingface_hub_4573 import get_inference_endpoint, list_inference_endpoints
 
 # Get one
 >>> get_inference_endpoint("my-endpoint-name")
@@ -267,7 +267,7 @@ A typical use case of Inference Endpoints is to process a batch of jobs at once 
 
 ```py
 >>> import asyncio
->>> from huggingface_hub import create_inference_endpoint
+>>> from huggingface_hub_4573 import create_inference_endpoint
 
 # Start endpoint + wait until initialized
 >>> endpoint = create_inference_endpoint(name="batch-endpoint",...).wait()
@@ -288,7 +288,7 @@ Or if your Inference Endpoint already exists and is paused:
 
 ```py
 >>> import asyncio
->>> from huggingface_hub import get_inference_endpoint
+>>> from huggingface_hub_4573 import get_inference_endpoint
 
 # Get endpoint + wait until initialized
 >>> endpoint = get_inference_endpoint("batch-endpoint").resume().wait()

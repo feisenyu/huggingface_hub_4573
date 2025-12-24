@@ -1,8 +1,8 @@
 import unittest
 from unittest.mock import Mock, patch
 
-from huggingface_hub.utils import get_hf_hub_version, get_python_version
-from huggingface_hub.utils._headers import _deduplicate_user_agent, _http_user_agent, build_hf_headers
+from huggingface_hub_4573.utils import get_hf_hub_version, get_python_version
+from huggingface_hub_4573.utils._headers import _deduplicate_user_agent, _http_user_agent, build_hf_headers
 
 from .testing_utils import handle_injection_in_test
 

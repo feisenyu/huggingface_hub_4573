@@ -49,7 +49,7 @@ from helpers import format_source_code
 from libcst.codemod import CodemodContext
 from libcst.codemod.visitors import GatherImportsVisitor
 
-from huggingface_hub import InferenceClient
+from huggingface_hub_4573 import InferenceClient
 
 
 # Paths to project files

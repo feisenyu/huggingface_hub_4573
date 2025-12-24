@@ -78,7 +78,7 @@ To learn more installation and optional dependencies, check out the [installatio
 Download a single file
 
 ```py
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 
 hf_hub_download(repo_id="tiiuae/falcon-7b-instruct", filename="config.json")
 ```
@@ -86,7 +86,7 @@ hf_hub_download(repo_id="tiiuae/falcon-7b-instruct", filename="config.json")
 Or an entire repository
 
 ```py
-from huggingface_hub import snapshot_download
+from huggingface_hub_4573 import snapshot_download
 
 snapshot_download("stabilityai/stable-diffusion-2-1")
 ```
@@ -106,7 +106,7 @@ hf auth login --token $HUGGINGFACE_TOKEN
 ### Create a repository
 
 ```py
-from huggingface_hub import create_repo
+from huggingface_hub_4573 import create_repo
 
 create_repo(repo_id="super-cool-model")
 ```
@@ -116,7 +116,7 @@ create_repo(repo_id="super-cool-model")
 Upload a single file
 
 ```py
-from huggingface_hub import upload_file
+from huggingface_hub_4573 import upload_file
 
 upload_file(
     path_or_fileobj="/home/lysandre/dummy-test/README.md",
@@ -128,7 +128,7 @@ upload_file(
 Or an entire folder
 
 ```py
-from huggingface_hub import upload_folder
+from huggingface_hub_4573 import upload_folder
 
 upload_folder(
     folder_path="/path/to/local/space",

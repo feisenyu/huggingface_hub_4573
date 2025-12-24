@@ -15,7 +15,7 @@ Once you've created a repository with [`create_repo`], you can upload a file to 
 Specify the path of the file to upload, where you want to upload the file to in the repository, and the name of the repository you want to add the file to. Depending on your repository type, you can optionally set the repository type as a `dataset`, `model`, or `space`.
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.upload_file(
 ...     path_or_fileobj="/path/to/local/folder/README.md",
@@ -32,7 +32,7 @@ to upload, where you want to upload the folder to in the repository, and the nam
 folder to. Depending on your repository type, you can optionally set the repository type as a `dataset`, `model`, or `space`.
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 
 # Upload all the content from the local folder to your remote Space.
@@ -190,7 +190,7 @@ artifacts while continuing a training. To do so, you can use the `run_as_future`
 object that you can use to check the status of the upload.
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> future = api.upload_folder( # Upload in the background (non-blocking action)
 ...     repo_id="username/my-model",
@@ -214,7 +214,7 @@ Even though background jobs are mostly useful to upload data/create commits, you
 built-in `run_as_future` argument in upload methods is just an alias around it.
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> api.run_as_future(api.create_repo, "username/my-model", exists_ok=True)
 Future(...)
@@ -249,7 +249,7 @@ upload it every 10 minutes. For example:
 >>> import uuid
 >>> from pathlib import Path
 >>> import gradio as gr
->>> from huggingface_hub import CommitScheduler
+>>> from huggingface_hub_4573 import CommitScheduler
 
 # Define the file where to save the data. Use UUID to make sure not to overwrite existing data from a previous run.
 >>> feedback_file = Path("user_feedback/") / f"data_{uuid.uuid4()}.json"
@@ -379,7 +379,7 @@ For example, if you want to upload two files and delete a file in a Hub reposito
 1. Use the appropriate `CommitOperation` to add or delete a file and to delete a folder:
 
 ```py
->>> from huggingface_hub import HfApi, CommitOperationAdd, CommitOperationDelete
+>>> from huggingface_hub_4573 import HfApi, CommitOperationAdd, CommitOperationDelete
 >>> api = HfApi()
 >>> operations = [
 ...     CommitOperationAdd(path_in_repo="LICENSE.md", path_or_fileobj="~/repo/LICENSE.md"),
@@ -426,7 +426,7 @@ is possible using [`preupload_lfs_files`] in combination with [`create_commit`].
 Here is a simple example illustrating how to pre-upload files:
 
 ```py
->>> from huggingface_hub import CommitOperationAdd, preupload_lfs_files, create_commit, create_repo
+>>> from huggingface_hub_4573 import CommitOperationAdd, preupload_lfs_files, create_commit, create_repo
 
 >>> repo_id = create_repo("test_preupload").repo_id
 

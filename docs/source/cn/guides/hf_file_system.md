@@ -11,7 +11,7 @@
 ## 使用方法
 
 ```python
->>> from huggingface_hub import hffs
+>>> from huggingface_hub_4573 import hffs
 
 >>> # 列出目录中的所有文件
 >>> hffs.ls("datasets/my-username/my-dataset-repo/data", detail=False)
@@ -71,7 +71,7 @@ hf://[<repo_type_prefix>]<repo_id>[@<revision>]/<path/in/repo>
 * 使用 [DuckDB](https://duckdb.org/docs/guides/python/filesystems) 查询(远程)Hub文件：
 
   ```python
-  >>> from huggingface_hub import HfFileSystem
+  >>> from huggingface_hub_4573 import HfFileSystem
   >>> import duckdb
 
   >>> fs = HfFileSystem()
@@ -107,7 +107,7 @@ hf://[<repo_type_prefix>]<repo_id>[@<revision>]/<path/in/repo>
 也可以通过将您的 token 作为参数传递给 [`HfFileSystem`] 以编程方式登录：
 
 ```python
->>> from huggingface_hub import HfFileSystem
+>>> from huggingface_hub_4573 import HfFileSystem
 >>> hffs = HfFileSystem(token=token)
 ```
 

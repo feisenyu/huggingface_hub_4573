@@ -17,7 +17,7 @@ This guide assumes you are familiar with the concept of webhooks on the Huggingf
 To create a new webhook, use [`create_webhook`] and specify the URL where payloads should be sent, what events should be watched, and optionally set a domain and a secret for security.
 
 ```python
-from huggingface_hub import create_webhook
+from huggingface_hub_4573 import create_webhook
 
 # Example: Creating a webhook
 webhook = create_webhook(
@@ -32,7 +32,7 @@ A webhook can also trigger a Job to run on Hugging face infrastructure instead o
 In this case you need to pass the ID of a source Job.
 
 ```python
-from huggingface_hub import create_webhook
+from huggingface_hub_4573 import create_webhook
 
 # Example: Creating a webhook that triggers a Job
 webhook = create_webhook(
@@ -51,7 +51,7 @@ For more information on Hugging Face Jobs, available hardware (CPU, GPU) and UV 
 To see all the webhooks you have configured, you can list them with [`list_webhooks`]. This is useful to review their IDs, URLs, and statuses.
 
 ```python
-from huggingface_hub import list_webhooks
+from huggingface_hub_4573 import list_webhooks
 
 # Example: Listing all webhooks
 webhooks = list_webhooks()
@@ -64,7 +64,7 @@ for webhook in webhooks:
 If you need to change the configuration of an existing webhook, such as the URL or the events it watches, you can update it using [`update_webhook`].
 
 ```python
-from huggingface_hub import update_webhook
+from huggingface_hub_4573 import update_webhook
 
 # Example: Updating a webhook
 updated_webhook = update_webhook(
@@ -80,7 +80,7 @@ updated_webhook = update_webhook(
 You might want to temporarily disable a webhook without deleting it. This can be done using [`disable_webhook`], and the webhook can be re-enabled later with [`enable_webhook`].
 
 ```python
-from huggingface_hub import enable_webhook, disable_webhook
+from huggingface_hub_4573 import enable_webhook, disable_webhook
 
 # Example: Enabling a webhook
 enabled_webhook = enable_webhook("your-webhook-id")
@@ -96,7 +96,7 @@ print("Disabled:", disabled_webhook)
 When a webhook is no longer needed, it can be permanently deleted using [`delete_webhook`].
 
 ```python
-from huggingface_hub import delete_webhook
+from huggingface_hub_4573 import delete_webhook
 
 # Example: Deleting a webhook
 delete_webhook("your-webhook-id")
@@ -125,7 +125,7 @@ concepts:
 
 ```python
 # app.py
-from huggingface_hub import webhook_endpoint, WebhookPayload
+from huggingface_hub_4573 import webhook_endpoint, WebhookPayload
 
 @webhook_endpoint
 async def trigger_training(payload: WebhookPayload) -> None:
@@ -216,7 +216,7 @@ decorators:
 
 ```python
 # app.py
-from huggingface_hub import webhook_endpoint, WebhookPayload
+from huggingface_hub_4573 import webhook_endpoint, WebhookPayload
 
 @webhook_endpoint
 async def trigger_training(payload: WebhookPayload) -> None:
@@ -253,7 +253,7 @@ Here is a complete example:
 ```python
 import gradio as gr
 from fastapi import Request
-from huggingface_hub import WebhooksServer, WebhookPayload
+from huggingface_hub_4573 import WebhooksServer, WebhookPayload
 
 # 1. Define  UI
 with gr.Blocks() as ui:

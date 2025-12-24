@@ -2,7 +2,7 @@ import time
 
 import pytest
 
-from huggingface_hub.utils._parsing import format_timesince, parse_duration, parse_size
+from huggingface_hub_4573.utils._parsing import format_timesince, parse_duration, parse_size
 
 
 @pytest.mark.parametrize(

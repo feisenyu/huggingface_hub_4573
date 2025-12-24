@@ -13,7 +13,7 @@ else:
     # Provide fallbacks or skip the entire module
     NotRequired = None
     Required = None
-from huggingface_hub.dataclasses import (
+from huggingface_hub_4573.dataclasses import (
     _build_strict_cls_from_typed_dict,
     _is_validator,
     as_validated_field,
@@ -22,7 +22,7 @@ from huggingface_hub.dataclasses import (
     validate_typed_dict,
     validated_field,
 )
-from huggingface_hub.errors import (
+from huggingface_hub_4573.errors import (
     StrictDataclassClassValidationError,
     StrictDataclassDefinitionError,
     StrictDataclassFieldValidationError,
@@ -423,7 +423,7 @@ def test_autocompletion_attribute_without_kwargs():
     # Create a sample script
     completions = jedi.Script("""
 from dataclasses import dataclass
-from huggingface_hub.dataclasses import strict
+from huggingface_hub_4573.dataclasses import strict
 
 @strict
 @dataclass
@@ -443,7 +443,7 @@ def test_autocompletion_attribute_with_kwargs():
     # Create a sample script
     completions = jedi.Script("""
 from dataclasses import dataclass
-from huggingface_hub.dataclasses import strict
+from huggingface_hub_4573.dataclasses import strict
 
 @strict(accept_kwargs=True)
 @dataclass
@@ -464,7 +464,7 @@ def test_autocompletion_init_without_kwargs():
     # Create a sample script
     completions = jedi.Script("""
 from dataclasses import dataclass
-from huggingface_hub.dataclasses import strict
+from huggingface_hub_4573.dataclasses import strict
 
 @strict
 @dataclass
@@ -483,7 +483,7 @@ def test_autocompletion_init_with_kwargs():
     # Create a sample script
     completions = jedi.Script("""
 from dataclasses import dataclass
-from huggingface_hub.dataclasses import strict
+from huggingface_hub_4573.dataclasses import strict
 
 @strict(accept_kwargs=True)
 @dataclass

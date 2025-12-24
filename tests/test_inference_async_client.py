@@ -30,7 +30,7 @@ from unittest.mock import Mock, patch
 import pytest
 
 import huggingface_hub.inference._common
-from huggingface_hub import (
+from huggingface_hub_4573 import (
     AsyncInferenceClient,
     ChatCompletionOutput,
     ChatCompletionOutputComplete,
@@ -41,8 +41,8 @@ from huggingface_hub import (
     InferenceTimeoutError,
     TextGenerationOutputPrefillToken,
 )
-from huggingface_hub.inference._common import ValidationError as TextGenerationValidationError
-from huggingface_hub.inference._common import _get_unsupported_text_generation_kwargs
+from huggingface_hub_4573.inference._common import ValidationError as TextGenerationValidationError
+from huggingface_hub_4573.inference._common import _get_unsupported_text_generation_kwargs
 
 from .test_inference_client import CHAT_COMPLETE_NON_TGI_MODEL, CHAT_COMPLETION_MESSAGES, CHAT_COMPLETION_MODEL
 from .testing_utils import with_production_testing

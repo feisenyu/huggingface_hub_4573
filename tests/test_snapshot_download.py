@@ -3,9 +3,9 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from huggingface_hub import CommitOperationAdd, HfApi, snapshot_download
-from huggingface_hub.errors import LocalEntryNotFoundError, RepositoryNotFoundError
-from huggingface_hub.utils import SoftTemporaryDirectory
+from huggingface_hub_4573 import CommitOperationAdd, HfApi, snapshot_download
+from huggingface_hub_4573.errors import LocalEntryNotFoundError, RepositoryNotFoundError
+from huggingface_hub_4573.utils import SoftTemporaryDirectory
 
 from .testing_constants import TOKEN
 from .testing_utils import OfflineSimulationMode, offline, repo_name

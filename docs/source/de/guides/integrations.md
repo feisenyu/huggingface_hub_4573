@@ -128,7 +128,7 @@ Hier ist, wie jeder Benutzer ein PyTorch-Modell vom/auf den Hub laden/speichern 
 ```python
 >>> import torch
 >>> import torch.nn as nn
->>> from huggingface_hub import PyTorchModelHubMixin
+>>> from huggingface_hub_4573 import PyTorchModelHubMixin
 
 # 1. Definieren Sie Ihr Pytorch-Modell genau so, wie Sie es gewohnt sind
 >>> class MyModel(nn.Module, PyTorchModelHubMixin): # Mehrfachvererbung
@@ -158,7 +158,7 @@ Die Implementierung ist tatsächlich sehr einfach, und die vollständige Impleme
 1. Zuerst, erben Ihrer Klasse von `ModelHubMixin`:
 
 ```python
-from huggingface_hub import ModelHubMixin
+from huggingface_hub_4573 import ModelHubMixin
 
 class PyTorchModelHubMixin(ModelHubMixin):
    (...)
@@ -167,7 +167,7 @@ class PyTorchModelHubMixin(ModelHubMixin):
 2. Implementieren der `_save_pretrained` Methode:
 
 ```py
-from huggingface_hub import ModelCard, ModelCardData
+from huggingface_hub_4573 import ModelCard, ModelCardData
 
 class PyTorchModelHubMixin(ModelHubMixin):
    (...)

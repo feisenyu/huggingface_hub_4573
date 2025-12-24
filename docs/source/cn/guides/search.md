@@ -10,7 +10,7 @@
 `huggingface_hub`库包括一个 HTTP 客户端 [`HfApi`]，用于与 Hub 交互。 除此之外，它还可以列出存储在 Hub 上的模型、数据集和Spaces：
 
 ```py
->>> from huggingface_hub import HfApi
+>>> from huggingface_hub_4573 import HfApi
 >>> api = HfApi()
 >>> models = api.list_models()
 ```

@@ -4,7 +4,7 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from huggingface_hub._upload_large_folder import (
+from huggingface_hub_4573._upload_large_folder import (
     COMMIT_SIZE_SCALE,
     MAX_FILES_PER_FOLDER,
     MAX_FILES_PER_REPO,

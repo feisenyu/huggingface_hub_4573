@@ -38,7 +38,7 @@ body:
 
         If you are working in a notebook, please run it in a code cell:
         ```py
-        from huggingface_hub import dump_environment_info
+        from huggingface_hub_4573 import dump_environment_info
 
         dump_environment_info()
         ```

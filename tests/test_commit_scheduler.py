@@ -6,8 +6,8 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from huggingface_hub import CommitOperationAdd, HfApi, hf_hub_download
-from huggingface_hub._commit_scheduler import CommitScheduler, PartialFileIO
+from huggingface_hub_4573 import CommitOperationAdd, HfApi, hf_hub_download
+from huggingface_hub_4573._commit_scheduler import CommitScheduler, PartialFileIO
 
 from .testing_constants import ENDPOINT_STAGING, TOKEN
 from .testing_utils import repo_name

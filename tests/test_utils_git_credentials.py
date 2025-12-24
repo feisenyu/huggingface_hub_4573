@@ -4,9 +4,9 @@ from pathlib import Path
 
 import pytest
 
-from huggingface_hub.constants import ENDPOINT
-from huggingface_hub.utils import run_interactive_subprocess, run_subprocess
-from huggingface_hub.utils._git_credential import (
+from huggingface_hub_4573.constants import ENDPOINT
+from huggingface_hub_4573.utils import run_interactive_subprocess, run_subprocess
+from huggingface_hub_4573.utils._git_credential import (
     _parse_credential_output,
     list_credential_helpers,
     set_git_credential,

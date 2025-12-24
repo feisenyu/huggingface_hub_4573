@@ -3,7 +3,7 @@ from unittest.mock import patch
 
 from fastapi import Request
 
-from huggingface_hub.utils import capture_output, is_gradio_available
+from huggingface_hub_4573.utils import capture_output, is_gradio_available
 
 from .testing_utils import requires
 
@@ -13,7 +13,7 @@ if is_gradio_available():
     from fastapi.testclient import TestClient
 
     import huggingface_hub._webhooks_server
-    from huggingface_hub import WebhookPayload, WebhooksServer
+    from huggingface_hub_4573 import WebhookPayload, WebhooksServer
 
 
 # Taken from https://huggingface.co/docs/hub/webhooks#event

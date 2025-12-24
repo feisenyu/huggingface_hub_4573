@@ -13,7 +13,7 @@ class TestHuggingfaceHubInit(unittest.TestCase):
         Not all autocomplete systems are based on Jedi but if this one works we can
         assume others do as well.
         """
-        source = """from huggingface_hub import c"""
+        source = """from huggingface_hub_4573 import c"""
         script = jedi.Script(source, path="example.py")
         completions = script.complete(1, len(source))
 

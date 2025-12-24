@@ -5,9 +5,9 @@ from unittest.mock import Mock, patch
 
 import pytest
 
-from huggingface_hub import hf_hub_download, scan_cache_dir
-from huggingface_hub.constants import CONFIG_NAME, HF_HUB_CACHE
-from huggingface_hub.file_download import are_symlinks_supported
+from huggingface_hub_4573 import hf_hub_download, scan_cache_dir
+from huggingface_hub_4573.constants import CONFIG_NAME, HF_HUB_CACHE
+from huggingface_hub_4573.file_download import are_symlinks_supported
 
 from .testing_utils import DUMMY_MODEL_ID, with_production_testing
 

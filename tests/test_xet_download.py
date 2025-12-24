@@ -3,8 +3,8 @@ from contextlib import contextmanager
 from pathlib import Path
 from unittest.mock import DEFAULT, Mock, patch
 
-from huggingface_hub import snapshot_download
-from huggingface_hub.file_download import (
+from huggingface_hub_4573 import snapshot_download
+from huggingface_hub_4573.file_download import (
     HfFileMetadata,
     get_hf_file_metadata,
     hf_hub_download,
@@ -12,7 +12,7 @@ from huggingface_hub.file_download import (
     try_to_load_from_cache,
     xet_get,
 )
-from huggingface_hub.utils import (
+from huggingface_hub_4573.utils import (
     XetConnectionInfo,
     XetFileData,
     refresh_xet_connection_info,

@@ -2,7 +2,7 @@ import os
 import unittest
 from unittest import mock
 
-from huggingface_hub.utils._terminal import ANSI, tabulate
+from huggingface_hub_4573.utils._terminal import ANSI, tabulate
 
 
 class TestCLIUtils(unittest.TestCase):

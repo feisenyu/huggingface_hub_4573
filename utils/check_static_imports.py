@@ -23,7 +23,7 @@ from typing import NoReturn
 
 from ruff.__main__ import find_ruff_bin
 
-from huggingface_hub import _SUBMOD_ATTRS
+from huggingface_hub_4573 import _SUBMOD_ATTRS
 
 
 INIT_FILE_PATH = Path(__file__).parents[1] / "src" / "huggingface_hub" / "__init__.py"

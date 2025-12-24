@@ -155,7 +155,7 @@ Here is how any user can load/save a PyTorch model from/to the Hub:
 ```python
 >>> import torch
 >>> import torch.nn as nn
->>> from huggingface_hub import PyTorchModelHubMixin
+>>> from huggingface_hub_4573 import PyTorchModelHubMixin
 
 
 # Define your Pytorch model exactly the same way you are used to
@@ -195,7 +195,7 @@ Here is how any user can load/save a PyTorch model from/to the Hub:
 128
 
 # Model card has been correctly populated
->>> from huggingface_hub import ModelCard
+>>> from huggingface_hub_4573 import ModelCard
 >>> card = ModelCard.load("username/my-awesome-model")
 >>> card.data.tags
 ["keras", "pytorch_model_hub_mixin", "model_hub_mixin"]
@@ -210,7 +210,7 @@ The implementation is actually very straightforward, and the full implementation
 1. First, inherit your class from `ModelHubMixin`:
 
 ```python
-from huggingface_hub import ModelHubMixin
+from huggingface_hub_4573 import ModelHubMixin
 
 class PyTorchModelHubMixin(ModelHubMixin):
    (...)
@@ -219,7 +219,7 @@ class PyTorchModelHubMixin(ModelHubMixin):
 2. Implement the `_save_pretrained` method:
 
 ```py
-from huggingface_hub import ModelHubMixin
+from huggingface_hub_4573 import ModelHubMixin
 
 class PyTorchModelHubMixin(ModelHubMixin):
    (...)
@@ -333,7 +333,7 @@ class VoiceCraft(
 Finally, if you want to extend the model card generation process with dynamic values, you can override the [`~ModelHubMixin.generate_model_card`] method:
 
 ```py
-from huggingface_hub import ModelCard, PyTorchModelHubMixin
+from huggingface_hub_4573 import ModelCard, PyTorchModelHubMixin
 
 class UniDepthV1(nn.Module, PyTorchModelHubMixin, ...):
    (...)

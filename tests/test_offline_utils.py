@@ -3,7 +3,7 @@ from io import BytesIO
 import httpx
 import pytest
 
-from huggingface_hub.file_download import http_get
+from huggingface_hub_4573.file_download import http_get
 
 from .testing_utils import OfflineSimulationMode, RequestWouldHangIndefinitelyError, offline
 
@@ -28,7 +28,7 @@ def test_offline_with_connection_error():
 
 def test_offline_with_datasets_offline_mode_enabled():
     with offline(OfflineSimulationMode.HF_HUB_OFFLINE_SET_TO_1):
-        from huggingface_hub.errors import OfflineModeIsEnabled
+        from huggingface_hub_4573.errors import OfflineModeIsEnabled
 
         with pytest.raises(OfflineModeIsEnabled):
             http_get("https://huggingface.co", BytesIO())
